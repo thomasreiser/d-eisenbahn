@@ -15,7 +15,10 @@
 
 <script src="/js/jquery-3.3.1.slim.min.js"></script>
 <script src="/js/popper-1.14.3.min.js"></script>
-<script src="/js/bootstrap-4.1.1.min.js"></script>
+{% if page == 'termine' %}
+  <script src="/js/jquery.bootstrap.year.calendar-1.0.0.min.js"></script>
+  <script src="/js/termine.js?v=20180615"></script>
+{% endif %}
 <script src="/js/picturefill-3.0.2.min.js" async></script>
 <script src="/js/zoigl.js?v=20180615"></script>
 </body>

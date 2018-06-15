@@ -281,6 +281,26 @@ header .navbar-nav .nav-item.active .nav-link {
   margin-right: 1rem;
 }
 
+#calendar .jqyc-year-chooser {
+  display: none;
+}
+#calendar .jqyc-td:hover {
+  cursor: default;
+  background-color: #fff;
+  color: #212532;
+}
+#calendar .jqyc-appended, #calendar .jqyc-appended:hover {
+  background-color: #ff9900;
+  border-radius: 0;
+}
+#calendar .zoigl-termin-txt {
+  display: inline-block;
+  background-image: url(/img/zoigl-stern.svg);
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px;
+}
+
 #eu-banner {
   position: absolute;
   bottom: 0;
