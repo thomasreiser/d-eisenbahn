@@ -9,6 +9,7 @@
 html {
   position: relative;
   min-height: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -94,6 +95,7 @@ header .navbar {
 header .navbar-nav .nav-item .nav-link {
   color: rgba(0, 0, 0, 0.8);
   border-bottom: none;
+  padding-left: 1.75rem !important;
 }
 header .navbar-nav .nav-item:not(.active) .nav-link:hover {
   background-color: #d4d4d4;
@@ -104,6 +106,15 @@ header .navbar-nav .nav-item.active .nav-link {
   cursor: default;
   background-color: #ddd;
   border-bottom: 3px solid #ff9900;
+  padding-left: 1.5rem;
+}
+.nav-link::after {
+    display: block;
+    content: attr(data-descr);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 @media (min-width: 576px) { /* small devices (landscape phones, 576px and up) */
   body:not(.shrinked) {
