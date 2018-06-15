@@ -5,7 +5,7 @@ $(function() {
   // Automatically shrink header
   var $header = $('#header');
   var shrinkHeader = function() {
-    if ($header.offset().top > 120) {
+    if ($header.offset().top > 60) {
       $header.addClass('shrinked');
     } else {
       $header.removeClass('shrinked');

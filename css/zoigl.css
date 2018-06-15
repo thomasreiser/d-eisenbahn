@@ -36,7 +36,7 @@ header {
 }
 header, header * {
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 }
 header .logo-top, header .logo-bottom {
   width: 320px;
@@ -143,6 +143,8 @@ header .navbar-nav .nav-item.active .nav-link {
     width: 32px;
     height: 32px;
     background-size: 32px 32px;
+  }
+  header:not(.shrinked) .logo-title .star {
     transform: translateY(-0.4rem);
   }
   header .logo-title .star.star-left {
@@ -196,16 +198,16 @@ header .navbar-nav .nav-item.active .nav-link {
   header:not(.shrinked) .line {
     border-width: 2px;
   }
-  header .logo-title .star {
+  header:not(.shrinked) .logo-title .star {
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
     transform: translateY(-0.5rem);
   }
-  header .logo-title .star.star-left {
+  header:not(.shrinked) .logo-title .star.star-left {
     margin-right: 4rem;
   }
-  header .logo-title .star.star-right {
+  header:not(.shrinked) .logo-title .star.star-right {
     margin-left: 4rem;
   }
 }
@@ -248,22 +250,32 @@ header .navbar-nav .nav-item.active .nav-link {
   header:not(.shrinked) .line {
     border-width: 3px;
   }
-  header .logo-title .star {
+  header:not(.shrinked) .logo-title .star {
     width: 64px;
     height: 64px;
     background-size: 64px 64px;
     transform: translateY(-1rem);
   }
-  header .logo-title .star.star-left {
+  header:not(.shrinked) .logo-title .star.star-left {
     margin-right: 7rem;
   }
-  header .logo-title .star.star-right {
+  header:not(.shrinked) .logo-title .star.star-right {
     margin-left: 7rem;
   }
 }
 
 main {
 
+}
+
+.text-wrapper {
+  column-count: 1;
+  column-gap: 50px;
+}
+
+.text-wrapper picture {
+  float: left;
+  margin-right: 1rem;
 }
 
 #eu-banner {
