@@ -264,8 +264,8 @@ header .navbar-nav .nav-item.active .nav-link {
   }
 }
 
-main {
-
+.table .thead-light th {
+  background: #eee;
 }
 
 .text-wrapper {

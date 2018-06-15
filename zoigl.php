@@ -1,5 +1,5 @@
 <?php
 require_once 'render.inc.php';
 
-echo $twig->render('zoigl.html', array('page' => 'zoigl'));
+echo $twig->render('zoigl.html', ['page' => 'zoigl']);
 ?>

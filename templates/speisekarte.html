@@ -1,0 +1,65 @@
+{{ include('inc/header.html') }}
+
+<h1>Speisekarte</h1>
+
+<script type="application/ld+json">
+  {
+    "@context": ."http://schema.org",
+    "@type": "Menu",
+    "mainEntityOfPage": "https://d-eisenbahn.com/speisekarte",
+    "inLanguage": "German",
+    "hasMenuSection":
+      {{ menu|json_encode(constant('JSON_PRETTY_PRINT'))|raw }}
+  }
+</script>
+
+<div class="row">
+  <table class="table mt-4 col-12 col-md-6">
+    {% for section in drinks %}
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in section.hasMenuItem %}
+          <tr>
+            <td scope="row" class="align-middle">
+                <span class="lead">{{ item.name }}</span>
+                {% if item.description|length %}
+                  <br><small>{{ item.description }}</small>
+                {% endif %}
+            </td>
+            <td class="align-middle">{{ item.offers.eligibleQuantity.name }}</td>
+            <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }} &euro;</strong></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    {% endfor %}
+  </table>
+  <table class="table mt-4 col-12 col-md-6">
+    {% for section in meals %}
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in section.hasMenuItem %}
+          <tr>
+            <td scope="row" class="align-middle">
+                <span class="lead">{{ item.name }}</span>
+                {% if item.description|length %}
+                  <br><small>{{ item.description }}</small>
+                {% endif %}
+            </td>
+            <td class="align-middle">{{ item.offers.eligibleQuantity.name }}</td>
+            <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }} &euro;</strong></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    {% endfor %}
+  </table>
+</div>
+
+{{ include('inc/footer.html') }}
