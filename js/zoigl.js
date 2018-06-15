@@ -27,16 +27,25 @@ $(function() {
     $okayButton.click(function() {
       document.cookie = gaDisableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
       window[gaDisableStr] = false;
+      $('#eu-banner').remove();
     });
 
-    var $disallowButton = $('<button type="button" class="btn btn-default btn-xs ml-2 mt-2 mt-xl-0" data-dismiss="alert" aria-label="Deaktivieren">Deaktivieren</button>');
+    var $disallowButton = $('<button type="button" class="btn btn-default btn-xs2 mt-2" data-dismiss="alert" aria-label="Deaktivieren">Deaktivieren</button>');
     $disallowButton.click(function() {
       document.cookie = gaDisableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
       window[gaDisableStr] = true;
+      $('#eu-banner').remove();
+    });
+
+    $('#deactivateGa').click(function() {
+      document.cookie = gaDisableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+      window[gaDisableStr] = true;
+      $('#eu-banner').remove();
+      alert('Google Analytics Tracking wurde für Sie deaktiviert.');
     });
 
     var $banner = $(
-        '<div id="eu-banner" class="alert alert-success alert-dismissible text-center mb-0" role="alert"><small class="d-block d-xl-inline">' +
+        '<div id="eu-banner" class="alert alert-success alert-dismissible text-center mb-0 px-1" role="alert"><small class="d-block d-xl-inline">' +
         'Diese Webseite verwendet Cookies und andere Technologien, um Ihnen ein angenehmeres Surfen zu ermöglichen. <a href="/datenschutz">Klicken Sie hier</a> für mehr Details.' +
         '</small></div>'
     );

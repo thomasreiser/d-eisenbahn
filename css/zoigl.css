@@ -28,6 +28,7 @@ a {
 a:hover {
   color: #333;
   text-decoration: none;
+  cursor: pointer;
 }
 
 header {
@@ -302,10 +303,10 @@ header .navbar-nav .nav-item.active .nav-link {
 }
 
 #eu-banner {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: fixed;
   bottom: 60px;
+  right: 10px;
+  width: 340px;
 }
 #eu-banner a {
   color: #155724;
