@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'alexbrush';
+    src: url('/font/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('/font/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #fff;
+  margin-top: 166px;
+  margin-bottom: 60px; /* footer */
+}
+body.no-transition {
+  transition: none;
+}
+
+header {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 5px, #eee 5px, #eee 100%);
+  padding: 0.25rem 0;
+}
+header, header * {
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+header .logo-top, header .logo-bottom {
+  width: 320px;
+  height: 20px;
+}
+header .logo-top .zoigl {
+  background-image: url(/img/zoigl.svg);
+  background-repeat: no-repeat;
+  background-size: 51px 14px;
+  width: 51px;
+  height: 14px;
+}
+header .logo-middle {
+  display: none;
+}
+header .logo-bottom {
+  margin-bottom: 0.25rem;
+}
+header .logo-bottom .vohenstrauss {
+  background-image: url(/img/vohenstrauss.svg);
+  background-repeat: no-repeat;
+  background-size: 51px 5px;
+  width: 51px;
+  height: 5px;
+}
+header .logo-title span {
+  font-family: 'alexbrush';
+  font-size: 4.5rem;
+  line-height: 2rem;
+  color: #000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+  margin-top: 1rem;
+}
+header .line {
+  flex-grow: 2;
+  height: 1px;
+  background-color: #666;
+  border: 1.2px #666 solid;
+}
+header .line.line-left {
+  transform: perspective(250px) rotateY(-45deg);
+}
+header .line.line-right {
+  transform: perspective(250px) rotateY(45deg);
+}
+@media (min-width: 576px) { /* small devices (landscape phones, 576px and up) */
+  body:not(.shrinked) {
+    margin-top: 110px;
+  }
+  header:not(.shrinked) .logo-middle {
+    display: flex;
+  }
+  header:not(.shrinked) .logo-middle .wirtschaft {
+    background-image: url(/img/wirtschaft.svg);
+    background-repeat: no-repeat;
+    background-size: 64px 10px;
+    width: 64px;
+    height: 10px;
+  }
+  header:not(.shrinked) .logo-title span {
+    font-size: 5rem;
+    line-height: 2rem;
+  }
+  header:not(.shrinked) .line {
+    border-width: 1.5px;
+  }
+}
+@media (min-width: 768px) { /* medium devices (tablets, 768px and up) */
+  body:not(.shrinked) {
+    margin-top: 227px;
+  }
+  header:not(.shrinked) {
+    padding-top: 1rem;
+  }
+  header:not(.shrinked) nav {
+    margin-top: 1rem;
+  }
+  header:not(.shrinked) .logo-top, header:not(.shrinked) .logo-bottom {
+    width: 500px;
+  }
+  header:not(.shrinked) .logo-top .zoigl {
+    background-size: 73px 20px;
+    width: 73px;
+    height: 20px;
+    margin: 0 0.5rem;
+  }
+  header:not(.shrinked) .logo-middle {
+    margin-top: 0.5rem;
+  }
+  header:not(.shrinked) .logo-middle .wirtschaft {
+    background-size: 89px 14px;
+    width: 89px;
+    height: 14px;
+  }
+  header:not(.shrinked) .logo-bottom {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+  header:not(.shrinked) .logo-bottom .vohenstrauss {
+    background-size: 73px 7.3px;
+    width: 73px;
+    height: 7.3px;
+    margin: 0 0.5rem;
+  }
+  header:not(.shrinked) .logo-title span {
+    font-size: 6rem;
+    line-height: 2.5rem;
+  }
+  header:not(.shrinked) .line {
+    border-width: 2px;
+  }
+}
+@media (min-width: 992px) and (min-height: 1000px) { /* large devices (desktops, 992px and up) */
+  body:not(.shrinked) {
+    margin-top: 307px;
+  }
+  header:not(.shrinked) .logo-top, header:not(.shrinked) .logo-bottom {
+    width: 700px;
+    height: 33px;
+  }
+  header:not(.shrinked) .logo-top .zoigl {
+    background-size: 120px 33px;
+    width: 120px;
+    height: 33px;
+    margin: 0 1.5rem;
+  }
+  header:not(.shrinked) .logo-middle {
+    margin-top: 1rem;
+  }
+  header:not(.shrinked) .logo-middle .wirtschaft {
+    background-size: 170px 20px;
+    width: 170px;
+    height: 20px;
+  }
+  header:not(.shrinked) .logo-bottom {
+    margin: 0;
+  }
+  header:not(.shrinked) .logo-bottom .vohenstrauss {
+    background-size: 120px 12px;
+    width: 120px;
+    height: 12px;
+    margin: 0 1.5rem;
+  }
+  header:not(.shrinked) .logo-title span {
+    font-size: 9rem;
+    line-height: 5rem;
+    margin-top: 1.5rem;
+  }
+  header:not(.shrinked) .line {
+    border-width: 3px;
+  }
+}
+
+.navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.8);
+}
+.navbar-nav .nav-item:not(.active) .nav-link:hover {
+  color: #fff;
+  background: #999;
+}
+.navbar-nav .nav-item.active .nav-link {
+  color: #000;
+  font-weight: bold;
+  cursor: default;
+}
+
+main {
+
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+footer .default {
+  line-height: 60px;
+}
+footer a.default {
+  color: rgba(0, 0, 0, 0.8);
+}
+footer .sep {
+  background-image: url(/img/zoigl-stern.svg);
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+footer .social {
+  padding: 0.1rem 0.3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  opacity: 0.8;
+}
+footer .social:hover {
+  opacity: 1;
+}
+footer .social.facebook {
+  background-color: #3b5998;
+}
+footer .social.twitter {
+  background-color: #1da1f2;
+}
+footer .social.tripadvisor {
+  background-color: #00af87;
+}
+footer .social.yelp {
+  background-color: #af0606;
+}
