@@ -267,6 +267,9 @@ header .navbar-nav .nav-item.active .nav-link {
 .table .thead-light th {
   background: #eee;
 }
+.table .table-bottom, .table .table-bottom td {
+  border: none !important;
+}
 
 .text-wrapper {
   column-count: 1;

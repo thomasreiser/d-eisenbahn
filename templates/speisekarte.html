@@ -1,6 +1,6 @@
 {{ include('inc/header.html') }}
 
-<h1>Speisekarte</h1>
+<h1 class="pt-sm-2 pt-md-0">Speisekarte</h1>
 
 <script type="application/ld+json">
   {
@@ -13,8 +13,8 @@
   }
 </script>
 
-<div class="row">
-  <table class="table mt-4 col-12 col-md-6">
+<div class="row px-3">
+  <table class="table mt-4 col-12 col-md-5">
     {% for section in drinks %}
       <thead class="thead-light">
         <tr>
@@ -30,14 +30,19 @@
                   <br><small>{{ item.description }}</small>
                 {% endif %}
             </td>
-            <td class="align-middle">{{ item.offers.eligibleQuantity.name }}</td>
+            <td class="align-middle">
+              {% if item.offers.eligibleQuantity.name != 'Haferl' %}
+                {{ item.offers.eligibleQuantity.name }}
+              {% endif %}
+            </td>
             <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }} &euro;</strong></td>
           </tr>
         {% endfor %}
       </tbody>
     {% endfor %}
   </table>
-  <table class="table mt-4 col-12 col-md-6">
+  <div class="col-0 col-md-2"></div>
+  <table class="table mt-4 col-12 col-md-5">
     {% for section in meals %}
       <thead class="thead-light">
         <tr>
@@ -53,12 +58,20 @@
                   <br><small>{{ item.description }}</small>
                 {% endif %}
             </td>
-            <td class="align-middle">{{ item.offers.eligibleQuantity.name }}</td>
+            <td class="align-middle"></td>
             <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }} &euro;</strong></td>
           </tr>
         {% endfor %}
       </tbody>
     {% endfor %}
+    <tbody class="table-bottom">
+      <tr>
+        <td scope="row" colspan="3">
+          <br>
+          <em>A Bauernbrot gibt`s immer dazou</em>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
 
