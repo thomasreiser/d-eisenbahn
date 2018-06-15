@@ -313,6 +313,12 @@ header .navbar-nav .nav-item.active .nav-link {
   text-decoration: underline;
 }
 
+.alert-zoigl {
+  color: #000;
+  background-color: #ff9900;
+  border-color: #e08600;
+}
+
 footer {
   position: absolute;
   bottom: 0;
