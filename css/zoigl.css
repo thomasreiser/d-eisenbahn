@@ -320,6 +320,15 @@ header .navbar-nav .nav-item.active .nav-link {
   border-color: #e08600;
 }
 
+@media (min-width: 992px) { /* large devices (desktops, 992px and up) */
+  .menu-border-a {
+    border-right: 1px solid #ddd;
+  }
+  .menu-border-b {
+    border-left: 1px solid #ddd;
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;
