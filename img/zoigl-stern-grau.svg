@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(130,150)">
-<polygon id="a" points="-108 -63 0 125 108 -63" fill="none" stroke="#666" stroke-width="24"/>
-<use transform="rotate(180)" xlink:href="#a"/>
-</g>
-</svg>
+<svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(130 150)"><path id="a" fill="none" stroke="#666" stroke-width="24" d="M-108-63L0 125 108-63z"/><use transform="rotate(180)" xlink:href="#a"/></g></svg>
