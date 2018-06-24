@@ -15,11 +15,16 @@
 
 <script src="/js/jquery-3.3.1.slim.min.js"></script>
 <script src="/js/bootstrap-4.1.1.min.js"></script>
-{% if page == 'termine' %}
+{% set termineDate = '20180615' %}
+{% if page == 'index' %}
+  <script src="/js/flipclock-2015-08-31.min.js"></script>
+  <script src="/js/termine.js?v={{ termineDate }}"></script>
+{% elseif page == 'termine' %}
   <script src="/js/jquery.bootstrap.year.calendar-1.0.0.min.js"></script>
-  <script src="/js/termine.js?v=20180615"></script>
+  <script src="/js/termine.js?v={{ termineDate }}"></script>
+{% elseif page == 'zoigl' %}
+  <script src="/js/picturefill-3.0.2.min.js" async></script>
 {% endif %}
-<script src="/js/picturefill-3.0.2.min.js" async></script>
 <script src="/js/zoigl.js?v=20180615"></script>
 </body>
 </html>

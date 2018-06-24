@@ -68,7 +68,9 @@
   	<meta name="msapplication-config" content="/browserconfig.xml">
 
     <link rel="stylesheet" href="/css/bootstrap-4.1.1.min.css">
-    {% if page == 'termine' %}
+    {% if page == 'index' %}
+      <link rel="stylesheet" href="/css/flipclock-2015-08-31.min.css">
+    {% elseif page == 'termine' %}
       <link rel="stylesheet" href="/css/jquery.bootstrap.year.calendar-1.0.0.min.css">
     {% endif %}
     <link rel="stylesheet" href="/css/zoigl.css">

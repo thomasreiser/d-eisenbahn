@@ -3,6 +3,36 @@
 <h1 class="pt-sm-2 pt-md-0">Herzlich willkommen</h1>
 <h2 class="pb-3">auf der Website der Zoiglstube &bdquo;d'Eisenbahn&rdquo;</h2>
 
-Zeit bis zum nächsten Zoigl -- Generelle Infos
+<div id="zoigl-clock"></div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var now = new Date();
+    var date = undefined;
+    var today = false;
+    window.appointments.some(function(item) {
+      if (item[0] >= now.getFullYear() && item[1] > now.getMonth() &&
+        ((item[1] === now.getMonth() - 1 && item[2] >= now.getDate()) || item[1] > now.getMonth() + 1)) {
+        date = new Date(item[0], item[1] - 1, item[2], 17, 0, 0, 0);
+        today = item[0] === now.getFullYear() && item[1] === now.getMonth() + 1 && item[2] === now.getDate();
+        return true;
+      }
+      return false;
+    });
+
+    if (!today) {
+      console.log(date);
+      var clock = $('#zoigl-clock').FlipClock(Math.abs((date.getTime() - now.getTime()) / 1000), {
+        clockFace: 'DailyCounter',
+        countdown: true,
+        language: 'german'
+      });
+    }
+    else {
+      $('#zoigl-clock').hide();
+      // today
+    }
+  });
+</script>
 
 {{ include('inc/footer.html') }}
