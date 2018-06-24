@@ -16,20 +16,20 @@
 <div class="row px-3">
   <table class="table mt-4 col-12 col-lg-5">
     {% for section in drinks %}
-      <thead class="thead-light">
+      <tbody class="thead-light">
         <tr>
           <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
         </tr>
-      </thead>
+      </tbody>
       <tbody>
         {% for item in section.hasMenuItem %}
           <tr>
-            <td scope="row" class="align-middle">
+            <th scope="row" class="align-middle">
                 <span class="lead">{{ item.name }}</span>
                 {% if item.description|length %}
                   <br><small>{{ item.description }}</small>
                 {% endif %}
-            </td>
+            </th>
             <td class="align-middle">
               {% if item.offers.eligibleQuantity.name != 'Haferl' %}
                 {{ item.offers.eligibleQuantity.name }}
@@ -45,20 +45,20 @@
   <div class="col-0 col-lg-1 menu-border-b"></div>
   <table class="table mt-4 col-12 col-lg-5">
     {% for section in meals %}
-      <thead class="thead-light">
+      <tbody class="thead-light">
         <tr>
           <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
         </tr>
-      </thead>
+      </tbody>
       <tbody>
         {% for item in section.hasMenuItem %}
           <tr>
-            <td scope="row" class="align-middle">
+            <th scope="row" class="align-middle">
                 <span class="lead">{{ item.name }}</span>
                 {% if item.description|length %}
                   <br><small>{{ item.description }}</small>
                 {% endif %}
-            </td>
+            </th>
             <td class="align-middle"></td>
             <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
           </tr>
@@ -67,10 +67,10 @@
     {% endfor %}
     <tbody class="table-bottom">
       <tr>
-        <td scope="row" colspan="3">
+        <th scope="row" colspan="3">
           <br>
           <em>A Bauernbrot gibt`s immer dazou</em>
-        </td>
+        </th>
       </tr>
     </tbody>
   </table>
