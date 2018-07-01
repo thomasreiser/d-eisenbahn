@@ -100,7 +100,10 @@ header .navbar {
 header .navbar-nav .nav-item .nav-link {
   color: rgba(0, 0, 0, 0.8);
   border-bottom: none;
-  padding-left: 1.75rem !important;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: inline-block;
+  text-align: center;
 }
 header .navbar-nav .nav-item:not(.active) .nav-link:hover {
   background-color: #d4d4d4;
@@ -111,7 +114,6 @@ header .navbar-nav .nav-item.active .nav-link {
   cursor: default;
   background-color: #ddd;
   border-bottom: 3px solid #ff9900;
-  padding-left: 1.5rem;
 }
 .nav-link::after {
     display: block;
@@ -120,6 +122,7 @@ header .navbar-nav .nav-item.active .nav-link {
     height: 0;
     overflow: hidden;
     visibility: hidden;
+    text-align: center;
 }
 @media (min-width: 576px) { /* small devices (landscape phones, 576px and up) */
   body {
@@ -216,7 +219,13 @@ header .navbar-nav .nav-item.active .nav-link {
     margin-left: 4rem;
   }
 }
-@media (min-width: 992px) and (min-height: 1000px) { /* large devices (desktops, 992px and up) */
+@media (min-width: 992px) { /* large devices (desktops, 992px and up) */
+  header .navbar-nav .nav-item .nav-link {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 992px) and (min-height: 1000px) { /* large devices (desktops, 992px and up) + min 1000px height */
   body:not(.shrinked) {
     margin-top: 307px;
   }
