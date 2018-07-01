@@ -33,18 +33,22 @@ a:hover {
 
 header {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 5px, #eee 5px, #eee 100%);
-  padding: 0.1rem 0;
+
 }
 header, header * {
   transition-property: all;
   transition-duration: 0.1s;
+}
+header .header-bg {
+  padding: 0.1rem 0;
+  background-image: url(/img/noisy.png);
 }
 header .logo-top, header .logo-bottom {
   width: 320px;
   height: 20px;
 }
 header .logo-top .zoigl {
-  background-image: url(/img/zoigl.svg);
+  background-image: url(/img/zoigl.svg
   background-repeat: no-repeat;
   background-size: 51px 14px;
   width: 51px;
@@ -159,7 +163,7 @@ header .navbar-nav .nav-item.active .nav-link {
   body {
     margin-top: 227px;
   }
-  header {
+  header .header-bg {
     padding-top: 1rem;
   }
   header nav {
@@ -284,6 +288,8 @@ header .navbar-nav .nav-item.active .nav-link {
 .image {
   -webkit-filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
           filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
+  border: 10px solid #eee;
+  outline: 1px solid #afafaf;
 }
 
 h1 {
