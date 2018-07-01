@@ -333,6 +333,17 @@ h1 {
   background-color: #ff9900;
   border-color: #e08600;
 }
+.alert-zoigl a {
+  border-bottom: 2px solid #222;
+}
+.alert-zoigl a:hover {
+  border-bottom: none;
+}
+.alert-grey {
+  color: #000;
+  background-color: #e6e6e6;
+  border-color: #a2a2a2;
+}
 
 @media (min-width: 992px) { /* large devices (desktops, 992px and up) */
   .menu-border-a {
