@@ -48,7 +48,7 @@ header .logo-top, header .logo-bottom {
   height: 20px;
 }
 header .logo-top .zoigl {
-  background-image: url(/img/zoigl.svg
+  background-image: url(/img/zoigl.svg);
   background-repeat: no-repeat;
   background-size: 51px 14px;
   width: 51px;
