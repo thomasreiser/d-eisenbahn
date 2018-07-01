@@ -1,0 +1,12 @@
+/* TEAM */
+	Owner: Sonja Reiser
+	Contact: info [at] d-eisenbahn.com
+
+	Web design/Programming: Thomas Reiser
+	Contact: thomas [at] d-eisenbahn.com
+
+
+/* SITE */
+	Language: Deutsch
+	Doctype: HTML5
+	IDE: Atom, Inkscape, Gimp
