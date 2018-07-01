@@ -1,5 +1,8 @@
 <?php
 require_once 'render.inc.php';
 
-echo $twig->render('kontakt.html', ['page' => 'kontakt']);
+echo $twig->render('kontakt.html', [
+  'page' => 'kontakt',,
+  'index' => true]
+);
 ?>

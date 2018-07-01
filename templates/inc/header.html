@@ -42,8 +42,11 @@
     <script src="/js/modernizr-custom.js"></script>
 
     <meta name="revisit-after" content="1 days">
-    <meta name="robots" content="index, follow">
-
+    {% if index %}
+      <meta name="robots" content="index, follow">
+    {% else %}
+      <meta name="robots" content="noindex, follow">
+    {% endif %}
     <link rel="canonical" href="https://d-eisenbahn.com/{{ page != 'index' ? page : '' }}"/>
 
     <link rel="shortcut icon" href="/img/favicon.ico">

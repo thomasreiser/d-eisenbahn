@@ -544,6 +544,7 @@ $menu = array_merge($drinks, $meals);
 
 echo $twig->render('speisekarte.html', [
   'page' => 'speisekarte',
+  'index' => true,
   'menu' => $menu,
   'drinks' => $drinks,
   'meals' => $meals
