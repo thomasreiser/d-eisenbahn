@@ -276,10 +276,18 @@ header .navbar-nav .nav-item.active .nav-link {
   column-count: 1;
   column-gap: 50px;
 }
-
 .text-wrapper picture {
   float: left;
   margin-right: 1rem;
+}
+
+.image {
+  -webkit-filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
+          filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
+}
+
+h1 {
+  text-align: center;
 }
 
 #calendar .jqyc-year-chooser {

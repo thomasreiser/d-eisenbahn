@@ -1,9 +1,8 @@
 {{ include('inc/header.html') }}
 
 <h1 class="pt-sm-2 pt-md-0">Herzlich willkommen</h1>
-<h2 class="pb-3">auf der Website der Zoiglstube &bdquo;d'Eisenbahn&rdquo;</h2>
 
-<div id="zoigl-clock"></div>
+<canvas id="zoigl-counter" class="d-none mt-5" width="300" height="300"></div>
 
 <script>
   window.addEventListener('DOMContentLoaded', function() {
@@ -19,20 +18,6 @@
       }
       return false;
     });
-
-    if (!today) {
-      console.log(date);
-      var clock = $('#zoigl-clock').FlipClock(Math.abs((date.getTime() - now.getTime()) / 1000), {
-        clockFace: 'DailyCounter',
-        countdown: true,
-        language: 'german'
-      });
-    }
-    else {
-      $('#zoigl-clock').hide();
-      // today
-    }
-  });
 </script>
 
 {{ include('inc/footer.html') }}

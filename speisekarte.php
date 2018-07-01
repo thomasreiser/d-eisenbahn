@@ -81,7 +81,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Limonade',
-        'description' => 'Zitrone, Orange, Cola, Cola-Mix',
+        'description' => 'Zitrone, Orange, Cola-Mix',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.70,
@@ -109,7 +109,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Saftschorle',
-        'description' => 'Zitrone, Orange',
+        'description' => 'Apfelsaft',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.70,
