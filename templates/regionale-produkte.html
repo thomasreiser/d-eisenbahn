@@ -2,23 +2,13 @@
 
 <h1 class="pt-sm-2 pt-md-0 pb-3">Regionale Produkte</h1>
 
-<canvas id="zoigl-counter" class="d-none mt-5" width="300" height="300"></div>
-
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-    var now = new Date();
-    var date = undefined;
-    var today = false;
-    window.appointments.some(function(item) {
-      if (item[0] >= now.getFullYear() && item[1] > now.getMonth() &&
-        ((item[1] === now.getMonth() - 1 && item[2] >= now.getDate()) || item[1] > now.getMonth() + 1)) {
-        date = new Date(item[0], item[1] - 1, item[2], 17, 0, 0, 0);
-        today = item[0] === now.getFullYear() && item[1] === now.getMonth() + 1 && item[2] === now.getDate();
-        return true;
-      }
-      return false;
-    });
-  });
-</script>
+<div id="bier" class="product"></div>
+<div id="wein" class="product"></div>
+<div id="schnaps" class="product"></div>
+<div id="kaese" class="product"></div>
+<div id="brot" class="product"></div>
+<div id="wurst" class="product"></div>
+<div id="fleisch" class="product"></div>
+<div id="fisch" class="product"></div>
 
 {{ include('inc/footer.html') }}
