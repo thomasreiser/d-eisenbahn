@@ -37,11 +37,11 @@ $(function() {
       $('#eu-banner').remove();
     });
 
-    $('#deactivateGa').click(function() {
+    $('.deactivateGa').click(function() {
       document.cookie = gaDisableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
       window[gaDisableStr] = true;
       $('#eu-banner').remove();
-      alert('Google Analytics Tracking wurde für Sie deaktiviert.');
+      alert('Das Tracking wurde für Sie deaktiviert.');
     });
 
     var $banner = $(

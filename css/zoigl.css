@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: linear-gradient(#fff, #f5f5f5);
   margin-top: 166px;
   margin-bottom: 60px; /* footer */
 }
@@ -354,37 +354,6 @@ h1 {
   border-color: #a2a2a2;
 }
 
-.product {
-  width: 60px;
-  height: 60px;
-  -webkit-filter: drop-shadow(-4px 4px 3px #ddd) grayscale(80%);
-          filter: drop-shadow(-4px 4px 3px #ddd) grayscale(80%);
-}
-#bier.product {
-  background-image: url(/img/bier.svg);
-}
-#wein.product {
-  background-image: url(/img/wein.svg);
-}
-#schnaps.product {
-  background-image: url(/img/schnaps.svg);
-}
-#kaese.product {
-  background-image: url(/img/kaese.svg);
-}
-#wurst.product {
-  background-image: url(/img/wurst.svg);
-}
-#fleisch.product {
-  background-image: url(/img/fleisch.svg);
-}
-#brot.product {
-  background-image: url(/img/brot.svg);
-}
-#fisch.product {
-  background-image: url(/img/fisch.svg);
-}
-
 @media (min-width: 992px) { /* large devices (desktops, 992px and up) */
   .menu-border-a {
     border-right: 1px solid #ddd;
@@ -440,4 +409,7 @@ footer .social.tripadvisor {
 }
 footer .social.yelp {
   background-color: #af0606;
+}
+footer .social.google {
+  background-color: #0057e7;
 }
