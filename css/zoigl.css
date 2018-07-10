@@ -289,16 +289,13 @@ header .navbar-nav .nav-item.active .nav-link {
   column-count: 1;
   column-gap: 50px;
 }
-.text-wrapper picture {
-  float: left;
-  margin-right: 1rem;
-}
 
 .image {
   -webkit-filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
           filter: drop-shadow(-4px 4px 3px #ddd) grayscale(50%);
   border: 10px solid #eee;
   outline: 1px solid #afafaf;
+  display: inline-block;
 }
 
 h1 {

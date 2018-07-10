@@ -1,6 +1,35 @@
 {{ include('inc/header.html') }}
 
-<h1 class="pt-sm-2 pt-md-0 pb-3">Zoigl in Vohenstrauß</h1>
+<h1 class="pt-sm-2 pt-md-0 pb-4">Zoigl in Vohenstrauß</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">Herzlich willkommen</h5>
+      <div class="card-body">
+        <h5 class="card-title">auf den Seiten der Zoiglwirtschaft &bdquo;d'Eisenbahn&rdquo;</h5>
+        <p class="card-text">In unserer historischen Zoiglstube können Sie frisch gezapften Zoigl und typisch bayrische Brotzeiten genießen.<br><br>Wir freuen uns auf Ihren Besuch!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">Zoigl-Countdown</h5>
+      <div class="card-body">
+        <p class="card-text" id="zoigl-countdown"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-wrapper text-center mt-5 mb-2">
+  <picture class="image" style="transform: rotate(-3deg)">
+    <source srcset="https://via.placeholder.com/1280x400, https://via.placeholder.com/2560x800 2x" media="(min-width: 1024)">
+    <source srcset="https://via.placeholder.com/640x250, https://via.placeholder.com/1280x500 2x" media="(min-width: 768px)">
+    <source srcset="https://via.placeholder.com/320x250, https://via.placeholder.com/640x500 2x">
+    <img src="https://via.placeholder.com/800x250" alt="Zoiglbier">
+  </picture>
+</div>
 
 <script>
   window.addEventListener('DOMContentLoaded', function() {
@@ -16,6 +45,17 @@
       }
       return false;
     });
+
+    var zoiglCountdown = document.getElementById('zoigl-countdown');
+    if (today) {
+      if (now.getHours() >= 17) {
+        zoiglCountdown.innerHTML = '&bdquo;d\'Eisenbahn&rdquo; hat heute seit 17 Uhr geöffnet! 🍺'
+      } else {
+        zoiglCountdown.innerHTML = '&bdquo;d\'Eisenbahn&rdquo; hat heute ab 17 Uhr geöffnet! 🍺'
+      }
+    } else {
+      zoiglCountdown.innerHTML = '&bdquo;d\'Eisenbahn&rdquo; ist wieder am ' + date.toLocaleDateString('de-DE') + ' geöffnet! 🍺'
+    }
   });
 </script>
 
