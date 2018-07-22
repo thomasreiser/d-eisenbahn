@@ -2,9 +2,9 @@
 
 <h1 class="pt-sm-2 pt-md-0 pb-4">Anfahrt zur Zoiglstube</h1>
 
-<div id="anfahrt" class="col-12"></div>
+<div id="anfahrt" class="col-12 mb-2"></div>
 
-<em>Klicken Sie <a href="{{ directions }}">hier</a> oder auf die Zoiglstube in der Karte um alle Details sowie die Möglichkeit einer Routenberechnung über Google Maps zu erhalten.</em>
+<em>Klicken Sie <strong><a href="{{ directions }}">hier</a></strong> oder auf die Zoiglstube in der Karte um alle Details sowie die Möglichkeit einer Routenberechnung über Google Maps zu erhalten.</em>
 
 <script>
   var apiKey = document.location.hostname === 'd-eisenbahn.com' ? '_y9l5T5-RA-Ot-2OfAKy9A' : 'N4rJnUJYQVu0If7lg8blUA';
@@ -41,7 +41,7 @@
         }
       }
     });
-    map.setView([49.62639, 12.33992], 17.3250);
+    map.setView([9.62637, 12.34000], 17.3250);
     L.Nextzen.hash({map: map});
    });
  </script>
