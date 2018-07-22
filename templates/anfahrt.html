@@ -1,5 +1,49 @@
 {{ include('inc/header.html') }}
 
-Inhalt folgt
+<h1 class="pt-sm-2 pt-md-0 pb-4">Anfahrt zur Zoiglstube</h1>
+
+<div id="anfahrt" class="col-12"></div>
+
+<em>Klicken Sie <a href="{{ directions }}">hier</a> oder auf die Zoiglstube in der Karte um alle Details sowie die Möglichkeit einer Routenberechnung über Google Maps zu erhalten.</em>
+
+<script>
+  var apiKey = document.location.hostname === 'd-eisenbahn.com' ? '_y9l5T5-RA-Ot-2OfAKy9A' : 'N4rJnUJYQVu0If7lg8blUA';
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var map = L.Nextzen.map('anfahrt', {
+      apiKey: apiKey,
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+      tangramOptions: {
+        scene: {
+          import: [
+            'https://www.nextzen.org/carto/bubble-wrap-style/8/bubble-wrap-style.zip',
+            'https://www.nextzen.org/carto/bubble-wrap-style/8/themes/label-10.zip'
+          ],
+          sources: {
+            mapzen: {
+              url: 'https://{s}.tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt',
+              url_subdomains: ['a', 'b', 'c', 'd'],
+              url_params: {
+                api_key: apiKey
+              },
+              tile_size: 512,
+              max_zoom: 20
+            }
+          }
+        },
+        events: {
+          click: function(evt) {
+            if (evt && evt.feature && evt.feature.source_layer === 'pois'
+                && evt.feature.properties && evt.feature.properties.id === 340617139) {
+              window.location.href = "{{ directions }}";
+            }
+          }
+        }
+      }
+    });
+    map.setView([49.62639, 12.33992], 17.3250);
+    L.Nextzen.hash({map: map});
+   });
+ </script>
 
 {{ include('inc/footer.html') }}

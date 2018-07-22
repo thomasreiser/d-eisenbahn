@@ -124,6 +124,17 @@ header .navbar-nav .nav-item.active .nav-link {
     visibility: hidden;
     text-align: center;
 }
+
+#zoigl-video {
+  transform: rotate(-2deg);
+  display: block;
+  margin: 0 auto;
+}
+
+#anfahrt {
+  height: 200px;
+}
+
 @media (min-width: 576px) { /* small devices (landscape phones, 576px and up) */
   body {
     margin-top: 110px;
@@ -160,6 +171,13 @@ header .navbar-nav .nav-item.active .nav-link {
   }
   header .logo-title .star.star-right {
     margin-left: 2.5rem;
+  }
+  #zoigl-video {
+    width: 512px;
+    height: 286px;
+  }
+  #anfahrt {
+    height: 300px;
   }
 }
 @media (min-width: 768px) { /* medium devices (tablets, 768px and up) */
@@ -218,11 +236,21 @@ header .navbar-nav .nav-item.active .nav-link {
   header .logo-title .star.star-right {
     margin-left: 4rem;
   }
+  #zoigl-image {
+    float: left;
+  }
+  #anfahrt {
+    height: 400px;
+  }
 }
 @media (min-width: 992px) { /* large devices (desktops, 992px and up) */
   header .navbar-nav .nav-item .nav-link {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+  #zoigl-video {
+    width: 768px;
+    height: 429px;
   }
 }
 @media (min-width: 992px) and (min-height: 1000px) { /* large devices (desktops, 992px and up) + min 1000px height */
@@ -390,7 +418,8 @@ footer .sep {
   background-size: 16px 16px;
 }
 footer .social {
-  padding: 0.1rem 0.3rem;
+  display: inherit;
+  padding: 0.3em 0.3rem;
   color: #fff;
   font-size: 1.5rem;
   border-radius: 3px;

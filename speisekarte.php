@@ -110,7 +110,7 @@ $drinks = [
   ],
   [
     '@type' => 'MenuSection',
-    'name' => 'Wos worms zum trinken',
+    'name' => 'Wos woams zum trinken',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
@@ -262,7 +262,7 @@ $drinks = [
 $meals = [
   [
     '@type' => 'MenuSection',
-    'name' => 'Wos kalt`s zum Essen',
+    'name' => 'Wos kalts zum Essen',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
@@ -429,14 +429,14 @@ $meals = [
   ],
   [
     '@type' => 'MenuSection',
-    'name' => 'Wos worms zum Essen',
+    'name' => 'Wos woams zum Essen',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
-        'name' => '3 Käswürst`l mit Kraut',
+        'name' => 'Paar Käswürstl mit Kraut',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 3.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -446,10 +446,10 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => '3 Bauernseifzer mit Kraut',
+        'name' => 'Paar Knacker mit Kraut',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 3.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -459,10 +459,10 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => '3 Pfälzer mit Kraut',
+        'name' => 'Paar Kaminwuz`n mit Kraut',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 3.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -472,7 +472,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Würst`lteller mit Kraut',
+        'name' => 'Würstlteller mit Kraut',
         'description' => 'vo jeder oine',
         'offers' => [
           '@type' => 'Offer',
@@ -486,10 +486,11 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => '2 Paar sauerne Zipfl',
+        'name' => 'Leberknödlsuppn',
+        'description' => '(Fr./Sa./So.)',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 2.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -499,10 +500,11 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => '2 Paar Bratwürst`l mit KRaut',
+        'name' => 'Warmer Leberkäs mit Erdäpfsalat',
+        'description' => '(montags)',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 3.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
