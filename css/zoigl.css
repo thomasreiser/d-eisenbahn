@@ -298,6 +298,10 @@ header .navbar-nav .nav-item.active .nav-link {
   display: inline-block;
 }
 
+iframe {
+  border: 0;
+}
+
 h1 {
   text-align: center;
 }

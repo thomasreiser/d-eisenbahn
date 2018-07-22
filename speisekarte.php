@@ -21,19 +21,6 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Struz Zoigl',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 1.00,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => '0,3l'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
         'name' => 'Zoiglradler',
         'offers' => [
           '@type' => 'Offer',
@@ -64,11 +51,11 @@ $drinks = [
         'name' => 'Weinschorle',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.00,
+          'price' => 3.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => '0,3l'
+            'name' => '0,5l'
           ]
         ]
       ]
@@ -81,10 +68,10 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Limonade',
-        'description' => 'Zitrone, Orange, Cola-Mix',
+        'description' => 'Orange oder Cola-Mix',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 1.70,
+          'price' => 1.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -108,11 +95,10 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Saftschorle',
-        'description' => 'Apfelsaft',
+        'name' => 'Apfelschorle',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 1.70,
+          'price' => 1.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -135,7 +121,7 @@ $drinks = [
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => 'Haferl'
+            'name' => 'Tasse'
           ]
         ]
       ],
@@ -148,7 +134,7 @@ $drinks = [
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => 'Haferl'
+            'name' => 'Tasse'
           ]
         ]
       ],
@@ -157,11 +143,11 @@ $drinks = [
         'name' => 'Haferl Tee mit Rum (2cl)',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.50,
+          'price' => 3.00,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => 'Haferl'
+            'name' => 'Tasse'
           ]
         ]
       ]
@@ -219,7 +205,7 @@ $drinks = [
         'description' => '34% vol.',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 2.00,
+          'price' => 1.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -229,11 +215,11 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Prinz „Nusseria”',
+        'name' => 'Prinz „Nusserla”',
         'description' => '34% vol.',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 2.00,
+          'price' => 1.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -247,7 +233,21 @@ $drinks = [
         'description' => '31% vol.',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 2.00,
+          'price' => 1.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => '2cl'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
+        'name' => 'Kümmel',
+        'description' => '34% vol.',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 1.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -281,7 +281,7 @@ $meals = [
       [
         '@type' => 'MenuItem',
         'name' => 'Fischteller',
-        'description' => 'versch. Räucherfisch',
+        'description' => 'versch. Räucherfisch (freitags)',
         'offers' => [
           '@type' => 'Offer',
           'price' => 5.40,
@@ -298,11 +298,11 @@ $meals = [
         'description' => 'versch. Kässorten',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.90,
+          'price' => 5.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => '0,5l'
+            'name' => 'Teller'
           ]
         ]
       ],
@@ -374,7 +374,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'G`selchts',
+        'name' => 'Gselchts',
         'offers' => [
           '@type' => 'Offer',
           'price' => 5.40,
@@ -387,10 +387,10 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'O-Bazder',
+        'name' => 'Kalter Braten',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.00,
+          'price' => 4.20,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -400,24 +400,11 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Käsbrez`n',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 1.90,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Stück'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
         'name' => 'Wurst- oder Käsbrot',
-        'description' => 'Streichwurst, Wurst oder Käs',
+        'description' => 'Streichwurst, Wurst, Käs oder O-Bazder',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 1.90,
+          'price' => 2.00,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -435,19 +422,6 @@ $meals = [
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
             'name' => 'Scheibe'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
-        'name' => 'Brez`n nackert',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 0.90,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Stück'
           ]
         ]
       ]
