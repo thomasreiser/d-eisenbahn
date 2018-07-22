@@ -521,7 +521,7 @@ $menu = array_merge($drinks, $meals);
 echo $twig->render('speisekarte.html', [
   'page' => 'speisekarte',
   'index' => true,
-  'title' => 'Speisen und Getränke ✡ d´ Eisenbahn',
+  'title' => "Speisen und Getränke ✡ d'Eisenbahn",
   'description' => 'Unsere Speisekarte 🍺 Zoiglwirtschaft in Vohenstrauß 🍺 Zoigl frisch vom Fass 🍺 Regionale Spezialitäten 🍺 Warme und kalte Speisen',
   'menu' => $menu,
   'drinks' => $drinks,
