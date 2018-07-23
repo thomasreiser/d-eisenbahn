@@ -13,69 +13,71 @@
   }
 </script>
 
-<div class="row px-3">
-  <table class="table mt-4 col-12 col-lg-5">
-    {% for section in drinks %}
-      <tbody class="thead-light">
+<div class="container-fluid px-3">
+  <div class="row">
+    <table class="table mt-4 col-12 col-lg-5">
+      {% for section in drinks %}
+        <tbody class="thead-light">
+          <tr>
+            <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+          </tr>
+        </tbody>
+        <tbody>
+          {% for item in section.hasMenuItem %}
+            <tr>
+              <th scope="row" class="align-middle">
+                  <span class="lead">{{ item.name }}</span>
+                  {% if item.description|length %}
+                    <br><small>{{ item.description }}</small>
+                  {% endif %}
+              </th>
+              <td class="align-middle">
+                {% if item.offers.eligibleQuantity.name != 'Haferl' %}
+                  {{ item.offers.eligibleQuantity.name }}
+                {% endif %}
+              </td>
+              <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+    </table>
+    <div class="col-0 col-lg-1 menu-border-a"></div>
+    <div class="col-0 col-lg-1 menu-border-b"></div>
+    <table class="table mt-4 col-12 col-lg-5">
+      {% for section in meals %}
+        <tbody class="thead-light">
+          <tr>
+            <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+          </tr>
+        </tbody>
+        <tbody>
+          {% for item in section.hasMenuItem %}
+            <tr>
+              <th scope="row" class="align-middle">
+                  <span class="lead">{{ item.name }}</span>
+                  {% if item.description|length %}
+                    <br><small>{{ item.description }}</small>
+                  {% endif %}
+              </th>
+              <td class="align-middle"></td>
+              <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
+      <tbody class="table-bottom">
         <tr>
-          <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+          <td scope="row" colspan="3">
+            <br>
+            <em><i class="fas fa-arrow-right"></i> <strong>A Bauernbrot gibt`s immer dazou</strong></em>
+            <br>
+            <em><i class="fas fa-arrow-right"></i> D` Wurst is vo Vohenstraußer Metzger</em>
+          </td>
         </tr>
       </tbody>
-      <tbody>
-        {% for item in section.hasMenuItem %}
-          <tr>
-            <th scope="row" class="align-middle">
-                <span class="lead">{{ item.name }}</span>
-                {% if item.description|length %}
-                  <br><small>{{ item.description }}</small>
-                {% endif %}
-            </th>
-            <td class="align-middle">
-              {% if item.offers.eligibleQuantity.name != 'Haferl' %}
-                {{ item.offers.eligibleQuantity.name }}
-              {% endif %}
-            </td>
-            <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    {% endfor %}
-  </table>
-  <div class="col-0 col-lg-1 menu-border-a"></div>
-  <div class="col-0 col-lg-1 menu-border-b"></div>
-  <table class="table mt-4 col-12 col-lg-5">
-    {% for section in meals %}
-      <tbody class="thead-light">
-        <tr>
-          <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
-        </tr>
-      </tbody>
-      <tbody>
-        {% for item in section.hasMenuItem %}
-          <tr>
-            <th scope="row" class="align-middle">
-                <span class="lead">{{ item.name }}</span>
-                {% if item.description|length %}
-                  <br><small>{{ item.description }}</small>
-                {% endif %}
-            </th>
-            <td class="align-middle"></td>
-            <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    {% endfor %}
-    <tbody class="table-bottom">
-      <tr>
-        <td scope="row" colspan="3">
-          <br>
-          <em><i class="fas fa-arrow-right"></i> <strong>A Bauernbrot gibt`s immer dazou</strong></em>
-          <br>
-          <em><i class="fas fa-arrow-right"></i> D` Wurst is vo Vohenstraußer Metzger</em>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    </table>
+  </div>
 </div>
 
 <div class="alert alert-grey mt-4" role="alert">
