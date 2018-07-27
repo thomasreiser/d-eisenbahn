@@ -15,84 +15,88 @@
 
 <div class="container-fluid px-3">
   <div class="row">
-    <table class="table mt-4 col-12 col-lg-5">
-      {% for section in drinks %}
-        <tbody class="thead-light">
+    <div class="col-12 col-lg-5">
+      <table class="table mt-4">
+        {% for section in drinks %}
+          <tbody class="thead-light">
+            <tr>
+              <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+            </tr>
+          </tbody>
+          <tbody>
+            {% for item in section.hasMenuItem %}
+              <tr>
+                <th scope="row" class="align-middle">
+                    <span class="lead">{{ item.name }}</span>
+                    {% if item.description|length %}
+                      <br><small>{{ item.description }}</small>
+                    {% endif %}
+                </th>
+                <td class="align-middle">
+                  {% if item.offers.eligibleQuantity.name != 'Tasse' %}
+                    {{ item.offers.eligibleQuantity.name }}
+                  {% endif %}
+                </td>
+                <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        {% endfor %}
+        <tbody class="table-bottom">
           <tr>
-            <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+            <td scope="row" colspan="3">
+              <br>
+              <div class="text-center prinz">
+                <span class="text-uppercase"><strong>Alte Sorten</strong></span>
+                <br>
+                <span class="text-uppercase"><strong>Das Original vom Schnaps-Prinz mit milden 41% vol.</strong></span>
+                <br>
+                Die Destillate der Alten Sorten reifen 18 bis 36 Monate im Steingut und es wird ihnen die Zeit gegeben, die sie brauchen,
+                um ihre feinen Fruchtnoten vollends entfalten zu können. Anschließend lagern die Destillate noch für weitere 6 bis 24 Monate
+                im Holzfass.
+              </div>
+            </td>
           </tr>
         </tbody>
-        <tbody>
-          {% for item in section.hasMenuItem %}
-            <tr>
-              <th scope="row" class="align-middle">
-                  <span class="lead">{{ item.name }}</span>
-                  {% if item.description|length %}
-                    <br><small>{{ item.description }}</small>
-                  {% endif %}
-              </th>
-              <td class="align-middle">
-                {% if item.offers.eligibleQuantity.name != 'Tasse' %}
-                  {{ item.offers.eligibleQuantity.name }}
-                {% endif %}
-              </td>
-              <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      {% endfor %}
-      <tbody class="table-bottom">
-        <tr>
-          <td scope="row" colspan="3">
-            <br>
-            <div class="text-center prinz">
-              <span class="text-uppercase"><strong>Alte Sorten</strong></span>
-              <br>
-              <span class="text-uppercase"><strong>Das Original vom Schnaps-Prinz mit milden 41% vol.</strong></span>
-              <br>
-              Die Destillate der Alten Sorten reifen 18 bis 36 Monate im Steingut und es wird ihnen die Zeit gegeben, die sie brauchen,
-              um ihre feinen Fruchtnoten vollends entfalten zu können. Anschließend lagern die Destillate noch für weitere 6 bis 24 Monate
-              im Holzfass.
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      </table>
+    </div>
     <div class="col-0 col-lg-1 menu-border-a"></div>
     <div class="col-0 col-lg-1 menu-border-b"></div>
-    <table class="table mt-4 col-12 col-lg-5">
-      {% for section in meals %}
-        <tbody class="thead-light">
+    <div class="col-12 col-lg-5">
+      <table class="table mt-4">
+        {% for section in meals %}
+          <tbody class="thead-light">
+            <tr>
+              <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+            </tr>
+          </tbody>
+          <tbody>
+            {% for item in section.hasMenuItem %}
+              <tr>
+                <th scope="row" class="align-middle">
+                    <span class="lead">{{ item.name }}</span>
+                    {% if item.description|length %}
+                      <br><small>{{ item.description }}</small>
+                    {% endif %}
+                </th>
+                <td class="align-middle"></td>
+                <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        {% endfor %}
+        <tbody class="table-bottom">
           <tr>
-            <th scope="col" colspan="3" class="text-center">{{ section.name }}</th>
+            <td scope="row" colspan="3">
+              <br>
+              <em><i class="fas fa-arrow-right"></i> <strong>A Bauernbrot gibt`s immer dazou</strong></em>
+              <br>
+              <em><i class="fas fa-arrow-right"></i> D` Wurst is vo Vohenstraußer Metzger</em>
+            </td>
           </tr>
         </tbody>
-        <tbody>
-          {% for item in section.hasMenuItem %}
-            <tr>
-              <th scope="row" class="align-middle">
-                  <span class="lead">{{ item.name }}</span>
-                  {% if item.description|length %}
-                    <br><small>{{ item.description }}</small>
-                  {% endif %}
-              </th>
-              <td class="align-middle"></td>
-              <td class="lead text-right align-middle"><strong>{{ item.offers.price|number_format(2, ',', '.') }}&nbsp;&euro;</strong></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      {% endfor %}
-      <tbody class="table-bottom">
-        <tr>
-          <td scope="row" colspan="3">
-            <br>
-            <em><i class="fas fa-arrow-right"></i> <strong>A Bauernbrot gibt`s immer dazou</strong></em>
-            <br>
-            <em><i class="fas fa-arrow-right"></i> D` Wurst is vo Vohenstraußer Metzger</em>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      </table>
+    </div>
   </div>
 </div>
 
