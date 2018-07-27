@@ -1,15 +1,23 @@
 @font-face {
     font-family: 'alexbrush';
-    src: url('/font/alexbrush-regular-webfont.woff2') format('woff2'),
-         url('/font/alexbrush-regular-webfont.woff') format('woff');
+    src: url('/font/alexbrush-regular.woff2') format('woff2'),
+         url('/font/alexbrush-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'chalkboard';
-    src: url('/font/chalkboard.woff2') format('woff2'),
-         url('/font/chalkboard.woff') format('woff');
+    src: url('/font/chalkboard-regular.woff2') format('woff2'),
+         url('/font/chalkboard-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'daniel';
+    src: url('/font/daniel-bold.woff2') format('woff2'),
+         url('/font/daniel-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -415,6 +423,10 @@ h1 {
 .prinz-logo.prinz-logo-small {
   width: 100px;
   height: 41px;
+}
+
+#zoigl-menu th .lead {
+  font-family: 'daniel';
 }
 
 @media (min-width: 768px) { /* medium devices (tablets, 768px and up) */
