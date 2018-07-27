@@ -107,8 +107,8 @@ header .navbar {
 header .navbar-nav .nav-item .nav-link {
   color: rgba(0, 0, 0, 0.8);
   border-bottom: none;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
   display: inline-block;
   text-align: center;
 }
@@ -391,7 +391,7 @@ h1 {
   border-color: #a2a2a2;
 }
 
-@media (min-width: 992px) { /* large devices (desktops, 992px and up) */
+@media (min-width: 768px) { /* medium devices (tablets, 768px and up) */
   .menu-border-a {
     border-right: 1px solid #ddd;
   }
@@ -430,6 +430,12 @@ footer {
 }
 footer .default {
   line-height: 60px;
+  font-size: 0.7rem;
+}
+@media (min-width: 576px) { /* small devices (landscape phones, 576px and up) */
+  footer .default {
+    font-size: 1rem;
+  }
 }
 footer a {
     border-bottom: none;
