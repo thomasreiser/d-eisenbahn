@@ -27,6 +27,9 @@
             {% for item in section.hasMenuItem %}
               <tr>
                 <th scope="row" class="align-middle">
+                    {% if 'prinz' in item.name|lower %}
+                      <div class="prinz-logo prinz-logo-small d-none d-sm-block ml-0"></div>
+                    {% endif %}
                     <span class="lead">{{ item.name }}</span>
                     {% if item.description|length %}
                       <br><small>{{ item.description }}</small>
@@ -47,6 +50,7 @@
             <td scope="row" colspan="3">
               <br>
               <div class="text-center prinz">
+                <div class="prinz-logo d-block mb-2"></div>
                 <span class="text-uppercase"><strong>Alte Sorten</strong></span>
                 <br>
                 <span class="text-uppercase"><strong>Das Original vom Schnaps-Prinz mit milden 41% vol.</strong></span>
