@@ -30,6 +30,10 @@ body.no-transition {
   transition: none;
 }
 
+.prinz {
+  color: #876e4f;
+}
+
 a {
   color: #000;
   border-bottom: 1px solid #ff9900;
