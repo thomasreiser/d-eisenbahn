@@ -18,6 +18,7 @@ html {
   position: relative;
   min-height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -332,6 +333,13 @@ header .navbar-nav .nav-item.active .nav-link {
   border: 10px solid #eee;
   outline: 1px solid #afafaf;
   display: inline-block;
+}
+@media (max-width: 340px) {
+  .image.small-center {
+    float: none !important;
+    transform: scale(0.8);
+    margin-left: -2.5rem;
+  }
 }
 
 iframe {
