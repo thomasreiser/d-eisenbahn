@@ -4,7 +4,7 @@ require_once 'render.inc.php';
 $drinks = [
   [
     '@type' => 'MenuSection',
-    'name' => 'Bier und Wein',
+    'name' => 'Mit Alkohol',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
@@ -63,7 +63,7 @@ $drinks = [
   ],
   [
     '@type' => 'MenuSection',
-    'name' => 'Alkoholfreie Getränke',
+    'name' => 'Ohne Alkohol',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
@@ -81,15 +81,14 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Mineralwasser',
-        'description' => 'Still oder mit Kohlensäure',
+        'name' => 'Tafelwasser',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.70,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
-            'name' => '0,3l'
+            'name' => '0,5l'
           ]
         ]
       ],
@@ -110,7 +109,7 @@ $drinks = [
   ],
   [
     '@type' => 'MenuSection',
-    'name' => 'Wos woams zum trinken',
+    'name' => 'Wos woams',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
@@ -281,7 +280,7 @@ $meals = [
       [
         '@type' => 'MenuItem',
         'name' => 'Fischteller',
-        'description' => 'versch. Räucherfisch (freitags)',
+        'description' => 'versch. Fischspezialitäten (freitags)',
         'offers' => [
           '@type' => 'Offer',
           'price' => 5.40,
@@ -339,6 +338,19 @@ $meals = [
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Teller'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
+        'name' => 'Schweizer Wurstsalat',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 4.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -500,7 +512,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Warmer Leberkäs mit Erdäpfsalat',
+        'name' => 'Warmer Leberkäs mit Erdäpflsalat',
         'description' => '(montags)',
         'offers' => [
           '@type' => 'Offer',

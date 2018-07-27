@@ -43,20 +43,32 @@
       {
         "@context": "http://schema.org",
         "@type": "Restaurant",
-        "name": "Zoiglwirtschaft „d´ Eisenbahn”",
+        "name": "Zoiglwirtschaft „d'Eisenbahn”",
         "description": "Zoigl und Brotzeiten in historischer Atmosphäre",
         "telephone": "+4996518593002",
+        "faxNumber": "+4996518593076",
+        "email": "info@d-eisenbahn.com",
         "menu": "https://d-eisenbahn.com/speisekarte",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": 5
+          "ratingValue": 5,
+          "ratingCount": 78
+        },
+        "image": "/img/image.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bahnhofstraße 18",
+          "postalCode": "92648",
+          "addressLocality", "Vohenstrauß"
         },
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "49.6263763",
           "longitude": "12.339973800000053"
         },
-        "hasMap": "https://www.google.de/maps/place/Zoiglwirtschaft+d'Eisenbahn/@49.6264989,12.336242,16z/data=!4m5!3m4!1s0x0:0x7ca690778574d902!8m2!3d49.6263825!4d12.3399961"
+        "hasMap": "https://www.google.de/maps/place/Zoiglwirtschaft+d'Eisenbahn/@49.6264989,12.336242,16z/data=!4m5!3m4!1s0x0:0x7ca690778574d902!8m2!3d49.6263825!4d12.3399961",
+        "priceRange": "2€ - 6€",
+        "servesCuisine": "Zoigl, Brotzeiten"
       }
     </script>
 
@@ -101,7 +113,7 @@
     {% elseif page == 'anfahrt' %}
       <link rel="stylesheet" href="https://www.nextzen.org/js/nextzen.css">
     {% endif %}
-    <link rel="stylesheet" href="/css/zoigl.css">
+    <link rel="stylesheet" href="/css/zoigl.css?v=20180727">
 
     <script src="/js/fontawesome-all-5.0.13.min.js" defer></script>
   </head>
