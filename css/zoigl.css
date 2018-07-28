@@ -14,14 +14,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'daniel';
-    src: url('/font/daniel-bold.woff2') format('woff2'),
-         url('/font/daniel-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -418,15 +410,27 @@ h1 {
   background-position: center center;
   width: 150px;
   height: 62px;
-  margin: 0 auto;
+}
+.table-bottom .prinz-logo {
+    margin: 0 auto;
 }
 .prinz-logo.prinz-logo-small {
   width: 100px;
   height: 41px;
 }
+.menu-logo-text {
+  line-height: 41px;
+}
 
-#zoigl-menu th .lead {
-  /*font-family: 'daniel';*/
+#zoigl-menu .zoigl-stern {
+  background-image: url(/img/zoigl-stern-grau.svg);
+  width: 41px;
+  height: 41px;
+  background-size: 41px 41px;
+}
+
+#zoigl-menu .lead {
+  font-size: 1.22rem;
 }
 
 @media (min-width: 768px) { /* medium devices (tablets, 768px and up) */

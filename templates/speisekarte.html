@@ -27,13 +27,31 @@
             {% for item in section.hasMenuItem %}
               <tr>
                 <th scope="row" class="align-middle">
-                    {% if 'prinz' in item.name|lower %}
-                      <div class="prinz-logo prinz-logo-small d-none d-sm-block ml-0"></div>
-                    {% endif %}
+                  {% if 'zoigl' in item.name|lower %}
+                    <div class="d-flex flex-row justify-content-start">
+                      <div class="zoigl-stern d-none d-sm-flex ml-0 mr-2"></div>
+                      <span class="lead d-none d-sm-flex menu-logo-text">{{ item.name }}</span>
+                    </div>
+                    <span class="lead d-sm-none">{{ item.name }}</span>
+                    {% if item.description|length %}<br class="d-inline-block d-sm-none">{% endif %}
+                  {% elseif 'prinz' in item.name|lower %}
+                    <div class="d-flex flex-row justify-content-start">
+                      <div class="prinz-logo prinz-logo-small d-none d-sm-flex ml-0 mr-2"></div>
+                      <span class="lead d-none d-sm-flex menu-logo-text">{{ item.name|replace({'Prinz ': ''}) }}</span>
+                    </div>
+                    <span class="lead d-sm-none">{{ item.name }}</span>
+                    {% if item.description|length %}<br class="d-inline-block d-sm-none">{% endif %}
+                  {% elseif 'ramazzotti' in item.name|lower %}
+                    <img src="/img/ramazzotti-logo.svg" height="41" alt="Ramazzotti" class="d-none d-sm-block">
+                    <span class="lead d-inline-block d-sm-none">{{ item.name }}</span>
+                    {% if item.description|length %}<br class="d-inline-block d-sm-none">{% endif %}
+                  {% else %}
                     <span class="lead">{{ item.name }}</span>
-                    {% if item.description|length %}
-                      <br><small>{{ item.description }}</small>
-                    {% endif %}
+                    {% if item.description|length %}<br>{% endif %}
+                  {% endif %}
+                  {% if item.description|length %}
+                    <small>{{ item.description }}</small>
+                  {% endif %}
                 </th>
                 <td class="align-middle">
                   {% if item.offers.eligibleQuantity.name != 'Tasse' %}

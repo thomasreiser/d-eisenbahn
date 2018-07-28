@@ -186,7 +186,7 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Prinz „Alte Haus-Zwetschge”',
+        'name' => 'Prinz „Alte Haus-Zwetschke”',
         'description' => '41% vol.',
         'offers' => [
           '@type' => 'Offer',
@@ -256,7 +256,7 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Ramazotti',
+        'name' => 'Ramazzotti',
         'description' => '30% vol.',
         'offers' => [
           '@type' => 'Offer',
