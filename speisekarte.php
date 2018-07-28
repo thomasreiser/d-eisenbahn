@@ -400,7 +400,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Gselchts',
+        'name' => 'G`selchts',
         'offers' => [
           '@type' => 'Offer',
           'price' => 5.40,
