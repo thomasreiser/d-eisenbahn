@@ -426,7 +426,7 @@ h1 {
 }
 
 #zoigl-menu th .lead {
-  font-family: 'daniel';
+  /*font-family: 'daniel';*/
 }
 
 @media (min-width: 768px) { /* medium devices (tablets, 768px and up) */

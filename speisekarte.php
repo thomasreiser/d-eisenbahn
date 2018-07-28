@@ -186,7 +186,7 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Prinz „Alte Haus-Zwetsche',
+        'name' => 'Prinz „Alte Haus-Zwetschge”',
         'description' => '41% vol.',
         'offers' => [
           '@type' => 'Offer',
@@ -243,7 +243,21 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Kümmel',
-        'description' => '34% vol.',
+        'description' => '35% vol.',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 1.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => '2cl'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
+        'name' => 'Ramazotti',
+        'description' => '30% vol.',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.90,
