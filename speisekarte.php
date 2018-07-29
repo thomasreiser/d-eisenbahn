@@ -485,7 +485,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Paar Kaminwuz`n mit Kraut',
+        'name' => 'Paar Kaminwurz`n mit Kraut',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.90,
