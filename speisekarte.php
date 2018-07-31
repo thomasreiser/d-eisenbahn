@@ -35,7 +35,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Glaserl Wein',
-        'description' => 'Rot oder weiß',
+        'description' => 'rot oder weiß',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.00,
@@ -68,7 +68,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Limonade',
-        'description' => 'Orange oder Cola-Mix',
+        'description' => 'Zitrone oder Cola-Mix',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.90,
@@ -321,7 +321,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Backsteinkäs mit Musik',
+        'name' => 'Zoiglkäs mit Musik',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.90,
