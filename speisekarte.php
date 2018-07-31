@@ -49,6 +49,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Weinschorle',
+        'description' => 'rot oder weiß',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.50,
