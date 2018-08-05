@@ -322,7 +322,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Zoiglkäs mit Musik',
+        'name' => 'Saurer Käs',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.90,
