@@ -415,6 +415,7 @@ $meals = [
       [
         '@type' => 'MenuItem',
         'name' => 'Kalter Braten',
+        'description' => 'mit Meerrettich oder Senf',
         'offers' => [
           '@type' => 'Offer',
           'price' => 4.20,
