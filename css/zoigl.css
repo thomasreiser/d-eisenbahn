@@ -354,6 +354,12 @@ h1 {
   text-align: center;
 }
 
+#calendar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 #calendar .jqyc-year-chooser {
   display: none;
 }
