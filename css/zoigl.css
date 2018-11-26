@@ -372,6 +372,11 @@ h1 {
   background-color: #ff9900;
   border-radius: 0;
 }
+#calendar .jqyc-appended.zoigl-special, #calendar .jqyc-appended.zoigl-special:hover {
+  background-color: #b2ff59;
+  border-radius: 0;
+  cursor: help;
+}
 #calendar .zoigl-termin-txt {
   display: inline-block;
   background-image: url(/img/zoigl-stern.svg);

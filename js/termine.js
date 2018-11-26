@@ -40,7 +40,7 @@ window.appointments = {
   2019: [
     [2019, 1, 4],
     [2019, 1, 5],
-    [2019, 1, 6],
+    [2019, 1, 6, 'Stirk trinken'],
     [2019, 1, 7],
 
     [2019, 2, 1],
@@ -48,12 +48,12 @@ window.appointments = {
     [2019, 2, 3],
     [2019, 2, 4],
 
-    [2019, 3, 1],
+    [2019, 3, 1, 'Kappenabend'],
     [2019, 3, 8],
     [2019, 3, 9],
     [2019, 3, 10],
     [2019, 3, 11],
-    [2019, 3, 19],
+    [2019, 3, 19, 'Josefifeier'],
 
     [2019, 4, 12],
     [2019, 4, 13],
@@ -89,8 +89,8 @@ window.appointments = {
     [2019, 10, 5],
     [2019, 10, 6],
     [2019, 10, 7],
-    [2019, 10, 27],
-    [2019, 10, 28],
+    [2019, 10, 27, 'Vohenstraußer Kirwa'],
+    [2019, 10, 28, 'Vohenstraußer Kirwa'],
 
     [2019, 11, 15],
     [2019, 11, 16],
@@ -105,7 +105,15 @@ window.appointments = {
 };
 
 $(function() {
-  var currentYear = Math.min(new Date().getFullYear(), 2018);
+  var now = new Date();
+  var currentYear = Math.min(now.getFullYear(), 2018);
+
+  var lastAppointmentThisYear = (window.appointments[currentYear] || []).slice(-1).pop();
+  if (lastAppointmentThisYear && (lastAppointmentThisYear[1] < now.getMonth + 1 ||
+      (lastAppointmentThisYear[1] === now.getMonth() + 1 && lastAppointmentThisYear[2] < now.getDate()))) {
+    currentYear++;
+  }
+
   var nextYear = currentYear + 1;
   var yearShift = nextYear in window.appointments;
   var $calendar = $('#calendar');
@@ -147,8 +155,17 @@ $(function() {
       });
 
       app.forEach(function(item, index, array) {
-        $cal.calendar('appendText', '<div class="zoigl-termin-txt"></div>', item[0], item[1], item[2], 'zoigl-termin');
+        var clazz;
+        var data;
+        if (item.length > 3 && typeof item[3] === 'string') {
+          clazz = 'zoigl-special';
+          data = item[3];
+        }
+        $cal.calendar('appendText', '<div class="zoigl-termin-txt"></div>', item[0], item[1], item[2], 'zoigl-termin', clazz, data);
       });
     }
   }
+
+
+  $('.zoigl-special').tooltip();
 });
