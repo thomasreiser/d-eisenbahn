@@ -106,7 +106,7 @@ window.appointments = {
 
 $(function() {
   var now = new Date();
-  var currentYear = Math.min(now.getFullYear(), 2018);
+  var currentYear = Math.max(now.getFullYear(), 2018);
 
   var lastAppointmentThisYear = (window.appointments[currentYear] || []).slice(-1).pop();
   if (lastAppointmentThisYear && (lastAppointmentThisYear[1] < now.getMonth + 1 ||
