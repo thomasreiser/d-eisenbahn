@@ -49,6 +49,10 @@
                     <img src="/img/ramazzotti-logo.svg" height="41" alt="Ramazzotti" class="d-none d-sm-block">
                     <span class="lead d-inline-block d-sm-none">{{ item.name }}</span>
                     {% if item.description|length %}<br class="d-inline-block d-sm-none">{% endif %}
+                  {% elseif 'jägermeister' in item.name|lower %}
+                    <img src="/img/jaegermeister-logo.png" height="41" alt="Jägermeister" class="d-none d-sm-block">
+                    <span class="lead d-inline-block d-sm-none">{{ item.name }}</span>
+                    {% if item.description|length %}<br class="d-inline-block d-sm-none">{% endif %}
                   {% else %}
                     <span class="lead">{{ item.name }}</span>
                     {% if item.description|length %}<br>{% endif %}

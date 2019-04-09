@@ -229,20 +229,6 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Prinz „Bitter”',
-        'description' => '31% vol.',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 1.90,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => '2cl'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
         'name' => 'Kümmel',
         'description' => '35% vol.',
         'offers' => [
@@ -258,6 +244,34 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Ramazzotti',
+        'description' => '30% vol.',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 1.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => '2cl'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
+        'name' => 'Kirschlikör',
+        'description' => '19% vol.',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 1.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => '2cl'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
+        'name' => 'Jägermeister',
         'description' => '30% vol.',
         'offers' => [
           '@type' => 'Offer',
@@ -284,35 +298,7 @@ $meals = [
         'description' => 'versch. Wurst, Käs, O-Bazder, Grieberlfett',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 5.40,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Teller'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
-        'name' => 'Fischteller',
-        'description' => 'versch. Fischspezialitäten (freitags)',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 5.40,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Teller'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
-        'name' => 'Kästeller',
-        'description' => 'versch. Kässorten',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 5.40,
+          'price' => 5.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -325,7 +311,7 @@ $meals = [
         'name' => 'Saurer Käs',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -339,7 +325,7 @@ $meals = [
         'description' => 'Pressack, Käs, Wurstsalat',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 4.90,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -352,7 +338,7 @@ $meals = [
         'name' => 'Wurstsalat',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -365,7 +351,7 @@ $meals = [
         'name' => 'Schweizer Wurstsalat',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.50,
+          'price' => 4.70,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -378,7 +364,7 @@ $meals = [
         'name' => 'Pressack mit Musik',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -391,7 +377,7 @@ $meals = [
         'name' => 'Tellersulz',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.20,
+          'price' => 4.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -418,7 +404,7 @@ $meals = [
         'description' => 'mit Meerrettich oder Senf',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.20,
+          'price' => 4.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -428,24 +414,11 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Wurst- oder Käsbrot',
-        'description' => 'Streichwurst, Wurst, Käs oder O-Bazder',
+        'name' => 'Belegtes Brot',
+        'description' => 'Wurst, Grieberlfett, Käs oder O-Bazder',
         'offers' => [
           '@type' => 'Offer',
           'price' => 2.00,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Scheibe'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
-        'name' => 'Grieberlfettbrot',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 1.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -460,6 +433,19 @@ $meals = [
     'name' => 'Wos woams zum Essen',
     'hasMenuItem' => [
       [
+        '@type' => 'MenuItem',
+        'name' => 'Strammer Max',
+        'description' => 'mit Schwarzwälder Schinken und 2 Ochsnaug`n',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 3.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Scheibe'
+          ]
+        ]
+      ],[
         '@type' => 'MenuItem',
         'name' => 'Paar Käswürstl mit Kraut',
         'offers' => [
@@ -477,7 +463,7 @@ $meals = [
         'name' => 'Paar Knacker mit Kraut',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -490,7 +476,7 @@ $meals = [
         'name' => 'Paar Kaminwurz`n mit Kraut',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -504,7 +490,7 @@ $meals = [
         'description' => 'vo jeder oine',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 4.70,
+          'price' => 5.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
