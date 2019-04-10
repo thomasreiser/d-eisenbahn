@@ -201,6 +201,20 @@ $drinks = [
       ],
       [
         '@type' => 'MenuItem',
+        'name' => 'Prinz „Alte Wald-Himbeere”',
+        'description' => '41% vol.',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 2.20,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => '2cl'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
         'name' => 'Prinz „Hausschnaps”',
         'description' => '34% vol.',
         'offers' => [
