@@ -528,8 +528,8 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Warmer Leberkäs mit Erdäpflsalat',
-        'description' => '(montags)',
+        'name' => 'Ofenfrischer Leberkäs',
+        'description' => 'mit Erdäpflsalat (montags)',
         'offers' => [
           '@type' => 'Offer',
           'price' => 3.90,
