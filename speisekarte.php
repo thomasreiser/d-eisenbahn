@@ -286,7 +286,7 @@ $drinks = [
       [
         '@type' => 'MenuItem',
         'name' => 'Jägermeister',
-        'description' => '30% vol.',
+        'description' => '35% vol.',
         'offers' => [
           '@type' => 'Offer',
           'price' => 1.90,
