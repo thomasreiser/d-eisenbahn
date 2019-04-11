@@ -428,7 +428,7 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Belegtes Brot',
+        'name' => 'Belegt`s Brot',
         'description' => 'Wurst, Grieberlfett, Käs oder O-Bazder',
         'offers' => [
           '@type' => 'Offer',
