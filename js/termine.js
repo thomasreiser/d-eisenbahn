@@ -64,6 +64,7 @@ window.appointments = {
     [2019, 5, 18],
     [2019, 5, 19],
     [2019, 5, 20],
+    [2019, 5, 30, 'Vatertag (nur bei schönem Wetter von 15.00-22.00 Uhr geöffnet!)'],
 
     [2019, 6, 21],
     [2019, 6, 22],
