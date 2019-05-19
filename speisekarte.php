@@ -444,7 +444,7 @@ $meals = [
   ],
   [
     '@type' => 'MenuSection',
-    'name' => 'Wos woams zum Essen',
+    'name' => 'Wos woams zum Essen (bis 21 Uhr)',
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
