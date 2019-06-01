@@ -536,3 +536,8 @@ footer .social.yelp {
 footer .social.google {
   background-color: #0057e7;
 }
+
+main {
+  max-width: 1900px;
+  margin: 0 auto;
+}
