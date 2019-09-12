@@ -448,11 +448,50 @@ $meals = [
     'hasMenuItem' => [
       [
         '@type' => 'MenuItem',
+        'name' => 'Herzhafter Limburger as`n Backofen',
+        'description' => 'mit Zwiebel, Tomaten, Paprika',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 4.90,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Teller'
+          ]
+        ]
+      ],[
+        '@type' => 'MenuItem',
+        'name' => '2 Toast mit Camembert',
+        'description' => 'mit Preiselbeer',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 4.40,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Teller'
+          ]
+        ]
+      ],[
+        '@type' => 'MenuItem',
+        'name' => '2 Toast Hawaii',
+        'description' => 'mit Schinken und Ananas',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 4.40,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Teller'
+          ]
+        ]
+      ],[
+        '@type' => 'MenuItem',
         'name' => 'Strammer Max',
         'description' => 'mit Schwarzwälder Schinken und 2 Ochsnaug`n',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 4.40,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
@@ -514,25 +553,10 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
-        'name' => 'Leberknödlsuppn',
-        'description' => '(Fr./Sa./So.)',
+        'name' => 'Leberknödelsuppn',
         'offers' => [
           '@type' => 'Offer',
-          'price' => 2.90,
-          'priceCurrency' => 'EUR',
-          'eligibleQuantity' => [
-            '@type' => 'QuantitativeValue',
-            'name' => 'Teller'
-          ]
-        ]
-      ],
-      [
-        '@type' => 'MenuItem',
-        'name' => 'Ofenfrischer Leberkäs',
-        'description' => 'mit Erdäpflsalat (montags)',
-        'offers' => [
-          '@type' => 'Offer',
-          'price' => 3.90,
+          'price' => 3.50,
           'priceCurrency' => 'EUR',
           'eligibleQuantity' => [
             '@type' => 'QuantitativeValue',
