@@ -335,6 +335,19 @@ $meals = [
       ],
       [
         '@type' => 'MenuItem',
+        'name' => 'Portion hausg`machter O-Bazder',
+        'offers' => [
+          '@type' => 'Offer',
+          'price' => 4.40,
+          'priceCurrency' => 'EUR',
+          'eligibleQuantity' => [
+            '@type' => 'QuantitativeValue',
+            'name' => 'Teller'
+          ]
+        ]
+      ],
+      [
+        '@type' => 'MenuItem',
         'name' => 'Saurer Teller',
         'description' => 'Pressack, Käs, Wurstsalat',
         'offers' => [
