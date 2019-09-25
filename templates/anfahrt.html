@@ -2,52 +2,78 @@
 
 <h1 class="pt-sm-2 pt-md-0 pb-4">Anfahrt zur Zoiglstube</h1>
 
-<div id="anfahrt" class="col-12 mb-2"></div>
+<div class="row mb-5">
+    <div class="col-12 col-md-4">
+        Sie finden uns unter folgender Adresse:
+        <br>
+        <br>
+        <strong>
+        Zoiglwirtschaft d'Eisenbahn<br>
+        Bahnhofstraße 18<br>
+        92648 Vohenstrauß
+        </strong>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="{{ directions }}" role="button">Google Maps Routenplanung</a>
+    </div>
+    <div class="col-12 col-md-8">
+        <div id="anfahrt" class="mt-4 mt-md-0"></div>
+    </div>
+</div>
 
-<em>Klicken Sie <strong><a href="{{ directions }}">hier</a></strong> oder auf die Zoiglstube in der Karte um alle Details sowie die Möglichkeit einer Routenberechnung über Google Maps zu erhalten.</em>
-
-<br>
-<br>
-
-<i class="fas fa-bicycle mr-1"></i>Oder haben Sie Lust auf eine Mountainbike-Tour bei der Sie zum Schluss mit einem Zoigl belohnt werden? <a href="https://www.komoot.de/smarttour/166024" target="_blank">Mehr Details finden Sie hier</a><i class="fas fa-bicycle ml-1"></i>
+<center>
+    <i class="fas fa-bicycle mr-1"></i>Oder haben Sie Lust auf eine Mountainbike-Tour bei der Sie zum Schluss mit einem Zoigl belohnt werden? <a href="https://www.komoot.de/smarttour/166024" target="_blank">Mehr Details finden Sie hier</a><i class="fas fa-bicycle ml-1"></i>
+</center>
 
 <script>
-  var apiKey = document.location.hostname === 'd-eisenbahn.com' ? '_y9l5T5-RA-Ot-2OfAKy9A' : 'N4rJnUJYQVu0If7lg8blUA';
-
-  window.addEventListener('DOMContentLoaded', function() {
-    var map = L.Nextzen.map('anfahrt', {
-      apiKey: apiKey,
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-      tangramOptions: {
-        scene: {
-          import: [
-            'https://www.nextzen.org/carto/bubble-wrap-style/8/bubble-wrap-style.zip',
-            'https://www.nextzen.org/carto/bubble-wrap-style/8/themes/label-10.zip'
-          ],
-          sources: {
-            mapzen: {
-              url: 'https://{s}.tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt',
-              url_subdomains: ['a', 'b', 'c', 'd'],
-              url_params: {
-                api_key: apiKey
-              },
-              tile_size: 512,
-              max_zoom: 20
+   window.addEventListener('DOMContentLoaded', function() {
+     mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzcmVpc2VyIiwiYSI6ImNrMHo1dGNkMjBiNTczY3BlaHgzeTZuenAifQ.qTsRbURNSaKls2SD25z7bQ';
+     document.map = new mapboxgl.Map({
+         container: 'anfahrt',
+         style: 'mapbox://styles/mapbox/streets-v11',
+         center: [12.339683705754283, 49.626394202928],
+         zoom: 17.92,
+         pitch: 59.5,
+         bearing: 143.85,
+         antialias: true,
+     });
+     
+     document.map.addControl(new mapboxgl.NavigationControl());
+     
+     document.map.on('load', function() {
+        var layers = document.map.getStyle().layers;
+         
+        var labelLayerId;
+        for (var i = 0; i < layers.length; i++) {
+            if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                labelLayerId = layers[i].id;
+                break;
             }
-          }
-        },
-        events: {
-          click: function(evt) {
-            if (evt && evt.feature && evt.feature.source_layer === 'pois'
-                && evt.feature.properties && evt.feature.properties.id === 340617139) {
-              window.location.href = "{{ directions }}";
-            }
-          }
         }
-      }
-    });
-    map.setView([49.62639, 12.34014], 17.6125);
-    L.Nextzen.hash({map: map});
+         
+        document.map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+            'fill-extrusion-height': [
+            "interpolate", ["linear"], ["zoom"],
+            15, 0,
+            15.05, ["get", "height"]
+            ],
+            'fill-extrusion-base': [
+            "interpolate", ["linear"], ["zoom"],
+            15, 0,
+            15.05, ["get", "min_height"]
+            ],
+            'fill-extrusion-opacity': 0.5
+        }
+        }, labelLayerId);
+     });
    });
  </script>
 
