@@ -23,7 +23,7 @@ $(function() {
   // Google Analytics Opt-Out
   var gaDisabled = window[gaDisableStr];
   if (typeof gaDisabled !== 'boolean') {
-    var $okayButton = $('<button type="button" class="btn btn-success btn-xs ml-3 mt-2 mt-xl-0"data-dismiss="alert" aria-label="Verstanden">Verstanden</button>');
+    var $okayButton = $('<button type="button" class="btn btn-success btn-xs ml-3 mt-2 mt-xl-0"data-dismiss="alert" aria-label="Verstanden">🍪 Verstanden</button>');
     $okayButton.click(function() {
       document.cookie = gaDisableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
       window[gaDisableStr] = false;
