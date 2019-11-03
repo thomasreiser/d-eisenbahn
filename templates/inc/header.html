@@ -1,11 +1,68 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<!--[if IE 9]>
+  <html lang="en" class="no-js ie9">
+<![endif]-->
+<!--[if (gt IE 9) | (!IE)]><!--> 
+  <html lang="en" class="no-js modern">
+<!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="revisit-after" content="1 days">
+    {% if index %}
+      <meta name="robots" content="index, follow">
+    {% else %}
+      <meta name="robots" content="noindex, follow">
+    {% endif %}
+    <link rel="author" href="humans.txt">
 
     <title>{{ title|escape }}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--[if IE 9]>
+      <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/css/bootstrap-ie9.min.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if (gt IE 9) | (!IE)]><!--> 
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" integrity="sha384-kcNNzf7wI8//ZkNUaDd5JwxLoFaBgkj9Z4O4NwtuX9Lkmsz0HoITOxJsGkYxDuyG" crossorigin="anonymous">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet" integrity="sha384-77TK4+igd0TLxnyEEPjXuvckTQQZJ1u0lPSZdWUN8F3LecUsLKzYou9c4HH/iMDL" crossorigin="anonymous">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha384-+pqJl+lfXqeZZHwVRNTbv2+eicpo+1TR/AEzHYYDKfAits/WRK21xLOwzOxZzJEZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" integrity="sha384-tft2+pObMD7rYFMZlLUziw/8QrQeKHU4GYYvA5jVaggC74ZrYdTASheA2vckPcX5" crossorigin="anonymous">
+    {% if page == 'termine' %}
+      <link rel="stylesheet" href="css/jquery.bootstrap.year.calendar-1.0.0.min.css">
+    {% elseif page == 'anfahrt' %}
+      <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css">
+    {% endif %}
+    <script src="/js/modernizr-custom-20191021.min.js"></script>
+    <link href="css/zoigl.css?v=20191103" rel="stylesheet">
+
+    <link rel="canonical" href="https://d-eisenbahn.com/{{ page != 'index' ? page : '' }}">
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+  	<link rel="icon" sizes="16x16 32x32 64x64" href="/img/favicon.ico">
+  	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+  	<link rel="icon" type="image/png" sizes="160x160" href="/img/favicon-160.png">
+  	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96.png">
+  	<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  	<link rel="apple-touch-icon" href="/img/favicon-57.png">
+  	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon-114.png">
+  	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon-72.png">
+  	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon-144.png">
+  	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon-60.png">
+  	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon-120.png">
+  	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-76.png">
+  	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon-152.png">
+  	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
+
+    <meta name="theme-color" content="#dd522c">
+  	<meta name="msapplication-TileColor" content="#dd522c">
+  	<meta name="msapplication-TileImage" content="/img/favicon-144.png">
+  	<meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="description" content="{{ description|escape }}">
 
     <script>
       var gaProperty = 'UA-120916540-1';
@@ -24,7 +81,7 @@
         ga('set', 'anonymizeIp', true);
         ga('send', 'pageview');
       }
-      if (!window[gaDisableStr]) {
+      if (!window[gaDisableStr] && Object.values) {
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -77,112 +134,36 @@
         "servesCuisine": "Zoigl, Brotzeiten"
       }
     </script>
-
-    <meta name="revisit-after" content="1 days">
-    {% if index %}
-      <meta name="robots" content="index, follow">
-    {% else %}
-      <meta name="robots" content="noindex, follow">
-    {% endif %}
-    <link rel="canonical" href="https://d-eisenbahn.com/{{ page != 'index' ? page : '' }}"/>
-
-    <link rel="shortcut icon" href="/img/favicon.ico">
-  	<link rel="icon" sizes="16x16 32x32 64x64" href="/img/favicon.ico">
-  	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
-  	<link rel="icon" type="image/png" sizes="160x160" href="/img/favicon-160.png">
-  	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96.png">
-  	<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png">
-  	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
-  	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
-  	<link rel="apple-touch-icon" href="/img/favicon-57.png">
-  	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon-114.png">
-  	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon-72.png">
-  	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon-144.png">
-  	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon-60.png">
-  	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon-120.png">
-  	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-76.png">
-  	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon-152.png">
-  	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
-
-    <meta name="theme-color" content="#ff9900">
-  	<meta name="msapplication-TileColor" content="#ff9900">
-  	<meta name="msapplication-TileImage" content="/img/favicon-144.png">
-  	<meta name="msapplication-config" content="/browserconfig.xml">
-    <meta name="description" content="{{ description|escape }}">
-
-    <link rel="author" href="humans.txt">
-
-    <link rel="stylesheet" href="/css/bootstrap-4.1.3.min.css">
-    <link rel="stylesheet" href="/css/fa-svg-with-js-5.0.13.css">
-    {% if page == 'termine' %}
-      <link rel="stylesheet" href="css/jquery.bootstrap.year.calendar-1.0.0.min.css">
-    {% elseif page == 'anfahrt' %}
-      <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css">
-    {% endif %}
-    <link rel="stylesheet" href="/css/zoigl.css?v=20190925">
-
-    <script src="/js/fontawesome-all-5.0.13.min.js" defer></script>
   </head>
-
-  <body class="no-transition">
-    <header id="header" class="fixed-top">
-      <div class="header-bg">
-      <div class="row m-0 justify-content-center">
-        <div class="d-flex justify-content-center align-items-center logo-top">
-          <div class="line line-left"></div>
-          <div class="zoigl"><span class="sr-only">Zoigl</span></div>
-          <div class="line line-right"></div>
-        </div>
-        <div class="w-100"></div>
-        <div class="flex-column justify-content-center align-items-center logo-middle">
-          <div class="wirtschaft"><span class="sr-only">Wirtschaft</span></div>
-        </div>
-        <div class="w-100"></div>
-        <div class="d-flex flex-wrap justify-content-center align-items-center logo-title">
-          <div class="star star-left"></div>
-          <span>d'Eisenbahn</span>
-          <div class="star star-right"></div>
-        </div>
-        <div class="w-100"></div>
-        <div class="d-flex justify-content-center align-items-center logo-bottom">
-          <div class="line line-left"></div>
-          <div class="vohenstrauss"><span class="sr-only">Vohenstrauß</span></div>
-          <div class="line line-right"></div>
-        </div>
+  <body class="{{ page == 'index' ? 'start' : '' }}">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <img id="deisenbahn-brand" class="navbar-brand p-0 ml-2 no-userselect" src="/img/deisenbahn.svg" height="30" alt="d'Eisenbahn">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item {{ page == 'index' ? 'active' : '' }}">
+            <a class="nav-link" href="/">Startseite</a>
+          </li>
+          <li class="nav-item {{ page == 'zoigl' ? 'active' : '' }}">
+            <a class="nav-link" href="/zoigl">Zoiglgeschichte</a>
+          </li>
+          <li class="nav-item {{ page == 'speisekarte' ? 'active' : '' }}">
+            <a class="nav-link" href="/speisekarte">Speisekarte</a>
+          </li>
+          <li class="nav-item {{ page == 'termine' ? 'active' : '' }}">
+            <a class="nav-link" href="/termine">Schanktermine</a>
+          </li>
+          <li class="nav-item {{ page == 'anfahrt' ? 'active' : '' }}">
+            <a class="nav-link" href="/anfahrt">Anfahrt</a>
+          </li>
+          <li class="nav-item {{ page == 'feste' ? 'active' : '' }}">
+            <a class="nav-link" href="/feste">Feste feiern</a>
+          </li>
+          <li class="nav-item {{ page == 'kontakt' ? 'active' : '' }}">
+            <a class="nav-link" href="/kontakt">Kontakt</a>
+          </li>
+        </ul>
       </div>
-
-      <nav class="navbar navbar-expand-md navbar-light pt-2 pt-sm-0 pt-md-2">
-        <button class="navbar-toggler ml-auto mb-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation klappen">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item {{ page == 'index' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/" data-descr="Startseite">Startseite</a>
-            </li>
-            <li class="nav-item {{ page == 'zoigl' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/zoigl" data-descr="Zoiglgeschichte">Zoiglgeschichte</a>
-            </li>
-            <li class="nav-item {{ page == 'speisekarte' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/speisekarte" data-descr="Speisekarte">Speisekarte</a>
-            </li>
-            <li class="nav-item {{ page == 'termine' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/termine" data-descr="Schanktermine">Schanktermine</a>
-            </li>
-            <li class="nav-item {{ page == 'anfahrt' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/anfahrt" data-descr="Anfahrt">Anfahrt</a>
-            </li>
-            <li class="nav-item {{ page == 'feste' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/feste" data-descr="Feste feiern">Feste&nbsp;feiern</a>
-            </li>
-            <li class="nav-item {{ page == 'kontakt' ? 'active' : '' }}">
-              <a class="nav-link d-block d-md-inline-block" href="/kontakt" data-descr="Kontakt">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    </header>
-
-    <main class="px-4 pt-sm-5 pt-md-1 pb-3">
+    </nav>

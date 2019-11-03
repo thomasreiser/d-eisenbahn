@@ -1,33 +1,32 @@
-</main>
+    <div id="legal" class="row">
+      <div class="col-12 text-center">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
 
-<footer>
-  <div class="d-flex justify-content-center align-items-center container">
-    <a class="default" href="/impressum">Impressum</a>
-    <div class="default sep mx-1 mx-sm-3"></div>
-    <a class="default" href="/datenschutz">Datenschutz</a>
-    <div class="default sep mx-3 d-none d-sm-flex"></div>
-    <a class="social facebook mx-1 d-none d-sm-flex" href="https://www.facebook.com/deisenbahn" title="d'Eisenbahn auf Facebook"><i class="fab fa-fw fa-facebook"></i></a>
-    {# <a class="social twitter mr-1 d-none d-sm-flex" href="#" title="d´ Eisenbahn auf Twitter"><i class="fab fa-fw fa-twitter"></i></a> #}
-    <a class="social tripadvisor mr-1 d-none d-sm-flex" href="https://www.tripadvisor.de/Restaurant_Review-g1067446-d10235103-Reviews-Zoiglstube_D_Eisenbahn-Vohenstrauss_Upper_Palatinate_Bavaria.html" title="d'Eisenbahn auf TripAdvisor"><i class="fab fa-fw fa-tripadvisor"></i></a>
-    <a class="social yelp mr-1 d-none d-sm-flex" href="https://www.yelp.de/biz/zoiglwirtschaft-d-eisenbahn-vohenstrau%C3%9F" title="d'Eisenbahn auf Yelp"><i class="fab fa-fw fa-yelp"></i></a>
-    <a class="social google mr-1 d-none d-sm-flex" href="https://goo.gl/maps/nKRwCMhurx52" title="d'Eisenbahn auf Google Maps"><i class="fab fa-fw fa-google"></i></a>
-  </div>
-</footer>
-
-<!--[if IE]><script src="/js/es5-shim-4.5.13.min.js"></script><![endif]-->
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
-<script src="/js/bootstrap.bundle-4.1.3.min.js"></script>
-{% set terminDate = '20191102' %}
-{% if page == 'index' %}
-  <script src="/js/termine.js?v={{ terminDate }}"></script>
-{% elseif page == 'termine' %}
-  <script src="/js/jquery.bootstrap.year.calendar-1.0.0-zoigl.min.js"></script>
-  <script src="/js/termine.js?v={{ terminDate }}"></script>
-{% elseif page == 'zoigl' %}
-  <script src="/js/picturefill-3.0.2.min.js" async></script>
-{% elseif page == 'anfahrt' %}
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js"></script>
-{% endif %}
-<script src="/js/zoigl.js?v=20181122"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.13/es5-shim.min.js" integrity="sha384-cTKQyQ7sbL5Xo+byIJsFKbZ3fHpk4dDnPVH+MYSOI/qlfu7utkEbtflGsfmf61kT" crossorigin="anonymous"></script>
+    <!--[if (gte IE 9) | (!IE)]><!--> 
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <!--<![endif]-->
+    <!--[if (gt IE 9) | (!IE)]><!--> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha384-l/y5WJTphApmSlx76Ev6k4G3zxu/+19CVvn9OTKI7gs4Yu5Hm8mjpdtdr5oyhnNo" crossorigin="anonymous"></script>
+    <!--<![endif]-->
+    <!--[if IE 9]>
+      <script src="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/js/bootstrap-ie9.min.js"></script>
+    <![endif]-->
+    {% set terminDate = '20191102' %}
+    {% if page == 'index' %}
+      <script src="/js/termine.js?v={{ terminDate }}"></script>
+    {% elseif page == 'termine' %}
+      <script src="/js/jquery.bootstrap.year.calendar-1.0.0-zoigl.min.js"></script>
+      <script src="/js/termine.js?v={{ terminDate }}"></script>
+    {% elseif page == 'zoigl' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha384-ZJsVW8YHHxQHJ+SJDncpN90d0EfAhPP+yA94n+EhSRzhcxfo84yMnNk+v37RGlWR" crossorigin="anonymous" async></script>
+    {% elseif page == 'anfahrt' %}
+      <script src="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js"></script>
+    {% endif %}
+    <script src="/js/zoigl.js?v=20191103"></script>
+  </body>
 </html>

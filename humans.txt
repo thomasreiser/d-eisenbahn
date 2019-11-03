@@ -3,10 +3,10 @@
 	Contact: info [at] d-eisenbahn.com
 
 	Web design/Programming: Thomas Reiser
-	Contact: thomas [at] d-eisenbahn.com
+	Contact: thomas [at] d-eisenbahn.com or https://thomas.reiser.zone
 
 
 /* SITE */
 	Language: Deutsch
 	Doctype: HTML5
-	IDE: Atom, Inkscape, Gimp
+	IDE: VS Code, Inkscape, Gimp

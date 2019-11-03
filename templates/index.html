@@ -1,60 +1,82 @@
 {{ include('inc/header.html') }}
 
-<h1 class="pt-sm-2 pt-md-0 pb-4">Zoigl in Vohenstrauß</h1>
+<h1>Zoigl in Vohenstrauß</h1>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <h5 class="card-header">Herzlich willkommen</h5>
-      <div class="card-body">
-        <h5 class="card-title">auf den Seiten der Zoiglwirtschaft &bdquo;d'Eisenbahn&rdquo;</h5>
-        <p class="card-text">In unserer historischen Zoiglstube können Sie frisch gezapften Zoigl und typisch bayrische Brotzeiten genießen.<br><br>Wir freuen uns auf Ihren Besuch!</p>
+<div id="owl-scanlines"></div>
+<div id="start-content" class="d-flex align-items-start justify-content-center flex-column text-white">
+  <img id="start-logo" class="mb-auto align-self-start mb-5 no-userselect" src="/img/logo.svg" alt="Zoiglwirtschaft d'Eisenbahn in Vohenstrauß">
+  <div id="start-containers" class="container">
+    <div class="row mb-4 mb-lg-0">
+      <div class="col-12 col-lg-6">
+          <div class="card mr-lg-3 h-100">
+              <h2 class="card-header">Herzlich willkommen</h2>
+              <div class="card-body">
+                <h5 class="card-title">auf den Seiten der Zoiglwirtschaft „d'Eisenbahn”</h5>
+                <p class="card-text">In unserer historischen Zoiglstube können Sie frisch gezapften Zoigl und typisch bayrische Brotzeiten genießen.
+                  <span class="hide-small-desktop"><br><br>Wir freuen uns auf Ihren Besuch!</span>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card ml-lg-3 mt-4 mt-lg-0 h-100">
+                <h2 class="card-header">Zoigl Countdown</h2>
+                <div class="card-body">
+                  <p class="card-text" id="zoigl-countdown">„d'Eisenbahn” ist wieder am 27.10.2019 geöffnet! 🍺</p>
+                  <p class="card-text"><strong>Am Kirwamontag, den 28.10. spielt der Eisenbahn-Zoigl-Express!</strong></p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div id="social-row" class="row">
+        <div class="col-12 mt-4">
+          <div class="card">
+            <div class="card-body mx-auto">
+              <div class="social-card">
+                <a href="https://www.facebook.com/deisenbahn">
+                  <i class="fab fa-facebook fa-fw social-logo" title="d'Eisenbahn bei Facebook"></i>
+                </a>
+              </div>
+              <div class="social-card">
+                <a href="https://www.yelp.de/biz/zoiglwirtschaft-d-eisenbahn-vohenstrau%C3%9F">
+                  <i class="fab fa-yelp fa-fw social-logo" title="d'Eisenbahn bei Yelp"></i>
+                </a>
+              </div>
+              <div class="social-card">
+                <a href="https://www.tripadvisor.de/Restaurant_Review-g1067446-d10235103-Reviews-Zoiglstube_D_Eisenbahn-Vohenstrauss_Upper_Palatinate_Bavaria.html">
+                  <i class="fab fa-tripadvisor fa-fw social-logo" title="d'Eisenbahn bei TripAdvisor"></i>
+                </a>
+              </div>
+              <div class="social-card">
+                <a href="https://goo.gl/maps/nKRwCMhurx52">
+                  <i class="fab fa-google fa-fw social-logo" title="d'Eisenbahn bei Google"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+          <div class="col-12">
+            <div class="card mt-4 h-100">
+                <h2 class="card-header">Regionale Spezialitäten</h2>
+                <div class="card-body">
+                  <p class="card-text">Zu <a href="/speisekarte">frisch gezapften Zoigl</a> gehört auch immer eine deftige Mahlzeit. In „der Eisenbahn” findet jeder Feinschmecker <a href="/speisekarte">eine kalte oder warme Brotzeit</a> &mdash; natürlich mit Liebe zubereitet und aus der Region.</p>
+                </div>
+              </div>
+          </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <h5 class="card-header">Zoigl-Countdown</h5>
-      <div class="card-body">
-        <p class="card-text" id="zoigl-countdown"></p>
-        {# <p class="card-text"><strong>Am Freitag, den 3.8. ab 18 Uhr spielt der "Eisenbahn Zoigl-Express"!</strong></p> #}
-      </div>
-    </div>
-  </div>
 </div>
 
-<div class="text-wrapper text-center mt-5 mb-3" style="transform: rotate(-2deg)">
-  <picture class="image small-center">
-    <source srcset="/img/tuerschild-1280x400.jpg, /img/tuerschild-2560x800.jpg 2x" media="(min-width: 1024)">
-    <source srcset="/img/tuerschild-640x250.jpg, /img/tuerschild-1280x500.jpg 2x" media="(min-width: 768px)">
-    <source srcset="/img/tuerschild-320x186.jpg, /img/tuerschild-640x371.jpg 2x">
-    <img src="/img/tuerschild-800x250.jpg" alt="Zoiglbier">
-  </picture>
-</div>
-
-
-<h2 class="pt-5">Regionale Spezialitäten</h2>
-
-<p>Zu <a href="/speisekarte">frisch gezapften Zoigl</a> gehört auch immer eine deftige Mahlzeit. In &bdquo;der Eisenbahn&rdquo; findet jeder Feinschmecker <a href="/speisekarte">eine kalte oder warme Brotzeit</a> - natürlich mit Liebe zubereitet und aus der Region.</p>
-
-<h2 class="pt-4">Historisches zur &bdquo;Eisenbahn&rdquo;</h2>
-
-<p>Die Zoiglstube &bdquo;d'Eisenbahn&rdquo; kann auf eine lange Geschichte zurückblicken. Das Gebäude mit dem einzigartigen Fachwerk auf der Rückseite wurde im Jahre 1707 erbaut. Im Jahre 1794 gehörte es dem Brauereibesitzer Johann Martin Landgraf. Vom großen Stadtbrandt 1839 verschont, wurde hier bis in die 1940er Jahre Weißbier gebraut, obwohl dies damals nicht selbstverständlich war, da der Weizen oft zu Schade zum Trinken war.</p>
-
-<p>Als dann 1886 die Eisenbahn nach Vohenstrauß kam, wurde das Gebäude in den Gasthof &bdquo;Zur Eisenbahn&rdquo; umbenannt. 1899 war der Gastwirt und Braumeister Heinrich Wolfgang Mühlhofer als Inhaber der Gaststätte aufgelistet.</p>
-
-<p>Im Jahre 1921 folgte  Brauereibesitzer Wolfgang Mühlhofer, der noch etwas mehr als 20 Jahre lang als Letzer Weißbier produzierte.</p>
-
-<p>In den 50er Jahren kaufte die damalige Brauerei Balk aus Kleinschwand das Gebäude. In den darauffolgenden Jahren wechselten die Pächter häufig - auch eine Pizzeria fand in ihm Platz.</p>
-
-<p>Von März 2007 bis März 2017 betrieb Jürgen Schittenhelm zusammen mit seiner Ehefrau Annett die Zoiglstube &bdquo;d'Eisenbahn&rdquo;.</p>
-
-<p>Die Zoiglstube wurde daraufhin im Jahre 2017 als &bdquo;Zoigl Moidla&rdquo; weiterbetrieben, schloss seine Pforten dann jedoch wieder nach bereits einem Jahr.</p>
-
-<p>Seit dem August 2018 betreibt die Familie Reiser die Zoiglwirtschaft wieder unter dem alten Namen &bdquo;d'Eisenbahn&rdquo;.</p>
-
-<small><em>(Historische Details stammen auszugsweise aus dem Artikel <a href="https://www.onetz.de/vohenstrauss/lokales/ehemaliges-weisses-brauhaus-hat-eine-bewegte-geschichte-hinter-sich-seit-2007-deisenbahn-auf-zoigl-zug-aufgesprungen-d951864.html" target="_blank">Auf Zoigl-Zug aufgesprungen</a> von Onetz.)</em></small>
-
+<main role="main">
+  <div id="start-images" class="owl-carousel owl-theme">
+    <div class="owl-lazy" data-src="/img/start/0.default.jpg" data-src-retina="/img/start/0.hidpi.jpg"></div>
+    <div class="owl-lazy" data-src="/img/start/1.default.jpg" data-src-retina="/img/start/1.hidpi.jpg"></div>
+    <div class="owl-lazy" data-src="/img/start/2.default.jpg" data-src-retina="/img/start/2.hidpi.jpg"></div>
+    <div class="owl-lazy" data-src="/img/start/3.default.jpg" data-src-retina="/img/start/3.hidpi.jpg"></div>
+  </div>
+</main>
 
 <script>
   window.addEventListener('DOMContentLoaded', function() {
