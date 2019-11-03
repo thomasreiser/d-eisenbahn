@@ -33,9 +33,9 @@ a:hover, .btn-link:hover {
 }
 
 .card, nav, .alert {
-  -webkit-box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
-     -moz-box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
-          box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 @supports (-ms-ime-align: auto) {
@@ -50,12 +50,12 @@ a:hover, .btn-link:hover {
 nav, nav.fixed-top, .tooltip {
   z-index: 9999;
 }
-.backdropfilter nav {
+.backdropfilter .start nav {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   background: none !important;
 }
-.no-backdropfilter nav {
+.no-backdropfilter .start nav {
   background: rgba(52, 58, 64, 0.9) !important;
 }
 @media (min-width: 1050px) {
@@ -99,9 +99,9 @@ nav, nav.fixed-top, .tooltip {
        -o-background-size: cover;
           background-size: cover;
   background-position: center;
-  -webkit-box-shadow: inset 0px 0px 100vh rgba(0,0,0,0.9);
-     -moz-box-shadow: inset 0px 0px 100vh rgba(0,0,0,0.9);
-          box-shadow: inset 0px 0px 100vh rgba(0,0,0,0.9);
+  -webkit-box-shadow: inset 0px 0px 100vh rgba(0, 0, 0, 0.9);
+     -moz-box-shadow: inset 0px 0px 100vh rgba(0, 0, 0, 0.9);
+          box-shadow: inset 0px 0px 100vh rgba(0, 0, 0, 0.9);
   -webkit-filter: brightness(75%) grayscale(40%);
           filter: brightness(75%) grayscale(40%);
 }
