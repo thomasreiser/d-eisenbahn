@@ -38,6 +38,15 @@ a:hover, .btn-link:hover {
           box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
 }
 
+@supports (-ms-ime-align: auto) {
+  /* Circumvent EdgeHTML rendering issues with blurry background and box shadow applied */
+  .backdropfilter #start-containers .card, .backdropfilter .alert {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 nav, nav.fixed-top, .tooltip {
   z-index: 9999;
 }
