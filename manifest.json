@@ -3,7 +3,7 @@
   "short_name": "d'Eisenbahn",
   "theme_color": "#dd522c",
   "background_color": "#ffffff",
-  "display": "browser",
+  "display": "fullscreen",
   "Scope": "/",
   "start_url": "/",
   "icons": [
