@@ -137,10 +137,14 @@
   </head>
   <body class="{{ page == 'index' ? 'start' : '' }}">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-      <img id="deisenbahn-brand" class="navbar-brand p-0 ml-2 no-userselect" src="/img/deisenbahn.svg" height="30" alt="d'Eisenbahn">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <input type="checkbox" id="navbar-toggle-cbox">
+      <a href="/"><img id="deisenbahn-brand" class="navbar-brand p-0 ml-2 no-userselect" src="/img/deisenbahn.svg" height="30" alt="d'Eisenbahn"></a>
+      <button class="navbar-toggler js" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navigation umschalten">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <label for="navbar-toggle-cbox" class="navbar-toggler no-js" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navigation umschalten">
+          <span class="navbar-toggler-icon"></span>
+      </label>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item {{ page == 'index' ? 'active' : '' }}">

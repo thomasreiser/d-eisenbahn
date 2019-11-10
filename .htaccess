@@ -1,6 +1,9 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteRule /?\.htaccess$ - [F,L]
+RewriteRule ^/?zoigl-info\.txt$ - [F,L]
+
 RewriteCond %{THE_REQUEST} ^.*/index\.html
 RewriteRule ^(.*)index.html$ /$1 [R=301,L]
 

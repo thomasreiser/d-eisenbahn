@@ -7,6 +7,6 @@
 
 
 /* SITE */
-	Language: Deutsch
+	Language: de
 	Doctype: HTML5
 	IDE: VS Code, Inkscape, Gimp

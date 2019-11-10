@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     var $banner = $(
-        '<div id="eu-banner" class="alert alert-dark alert-dismissible text-center mb-0 px-1 text-white" role="alert"><small class="d-block">' +
+        '<div id="eu-banner" class="alert alert-dark alert-dismissible text-center mb-0 px-1" role="alert"><small class="d-block">' +
         'Diese Webseite verwendet Cookies und andere Technologien, um Ihnen ein angenehmeres Surfen zu ermöglichen. <a href="/datenschutz">Klicken Sie hier</a> für mehr Details.' +
         '</small></div>'
     );
