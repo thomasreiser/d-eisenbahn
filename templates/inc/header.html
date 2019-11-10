@@ -20,24 +20,17 @@
 
     <title>{{ title|escape }}</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% set cacheDate = '20191110' %}
+    <script src="/js/modernizr-custom.min.js?v={{ cacheDate }}"></script>
+
+    <link href="css/d-eisenbahn.min.css?v={{ cacheDate }}" rel="stylesheet">
     <!--[if IE 9]>
       <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/css/bootstrap-ie9.min.css" rel="stylesheet">
     <![endif]-->
-    <!--[if (gt IE 9) | (!IE)]><!--> 
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" integrity="sha384-kcNNzf7wI8//ZkNUaDd5JwxLoFaBgkj9Z4O4NwtuX9Lkmsz0HoITOxJsGkYxDuyG" crossorigin="anonymous">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet" integrity="sha384-77TK4+igd0TLxnyEEPjXuvckTQQZJ1u0lPSZdWUN8F3LecUsLKzYou9c4HH/iMDL" crossorigin="anonymous">
-    <!--<![endif]-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" integrity="sha384-+pqJl+lfXqeZZHwVRNTbv2+eicpo+1TR/AEzHYYDKfAits/WRK21xLOwzOxZzJEZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" integrity="sha384-tft2+pObMD7rYFMZlLUziw/8QrQeKHU4GYYvA5jVaggC74ZrYdTASheA2vckPcX5" crossorigin="anonymous">
-    {% if page == 'termine' %}
-      <link rel="stylesheet" href="css/jquery.bootstrap.year.calendar-1.0.0.min.css">
-    {% elseif page == 'anfahrt' %}
+    {% if page == 'anfahrt' %}
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css">
     {% endif %}
-    <script src="/js/modernizr-custom-20191021.min.js"></script>
-    <link href="css/zoigl.css?v=20191103" rel="stylesheet">
-
+ 
     <link rel="canonical" href="https://d-eisenbahn.com/{{ page != 'index' ? page : '' }}">
 
     <link rel="shortcut icon" href="/img/favicon.ico">

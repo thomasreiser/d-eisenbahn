@@ -5,28 +5,15 @@
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.13/es5-shim.min.js" integrity="sha384-cTKQyQ7sbL5Xo+byIJsFKbZ3fHpk4dDnPVH+MYSOI/qlfu7utkEbtflGsfmf61kT" crossorigin="anonymous"></script>
-    <!--[if (gte IE 9) | (!IE)]><!--> 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-    <!--<![endif]-->
+    {% set cacheDate = '20191110' %}
     <!--[if (gt IE 9) | (!IE)]><!--> 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha384-l/y5WJTphApmSlx76Ev6k4G3zxu/+19CVvn9OTKI7gs4Yu5Hm8mjpdtdr5oyhnNo" crossorigin="anonymous"></script>
+      <script src="/js/d-eisenbahn.min.js?v={{ cacheDate }}"></script>
     <!--<![endif]-->
     <!--[if IE 9]>
-      <script src="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/js/bootstrap-ie9.min.js"></script>
+      <script src="/js/d-eisenbahn-ie9.min.js?v={{ cacheDate }}"></script>
     <![endif]-->
-    {% set terminDate = '20191102' %}
-    {% if page == 'index' %}
-      <script src="/js/termine.js?v={{ terminDate }}"></script>
-    {% elseif page == 'termine' %}
-      <script src="/js/jquery.bootstrap.year.calendar-1.0.0-zoigl.min.js"></script>
-      <script src="/js/termine.js?v={{ terminDate }}"></script>
-    {% elseif page == 'zoigl' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha384-ZJsVW8YHHxQHJ+SJDncpN90d0EfAhPP+yA94n+EhSRzhcxfo84yMnNk+v37RGlWR" crossorigin="anonymous" async></script>
-    {% elseif page == 'anfahrt' %}
+    {% if page == 'anfahrt' %}
       <script src="https://api.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js"></script>
     {% endif %}
-    <script src="/js/zoigl.js?v=20191103"></script>
   </body>
 </html>

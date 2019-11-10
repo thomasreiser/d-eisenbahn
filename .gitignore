@@ -1,3 +1,8 @@
 vendor/
 composer.lock
 *.exe
+node_modules/
+webfonts/
+css/d-eisenbahn.min.css
+js/d-eisenbahn.min.js
+js/d-eisenbahn-ie9.min.js

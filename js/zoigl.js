@@ -1,3 +1,7 @@
+/*!
+ * D-Eisenbahn zoigl.js
+ */
+
 window.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
@@ -65,3 +69,15 @@ window.addEventListener('DOMContentLoaded', function() {
     $('body').append($banner);
   }
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
+      // Registration was successful
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    }).catch(function(err) {
+      console.log(err);
+    });
+  });
+}
