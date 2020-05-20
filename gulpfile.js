@@ -11,6 +11,8 @@ function css() {
               'node_modules/owl.carousel/dist/assets/owl.theme.default.css',
               'node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
               'node_modules/@fortawesome/fontawesome-free/css/brands.css',
+              'node_modules/@fortawesome/fontawesome-free/css/solid.css',
+              'node_modules/@fortawesome/fontawesome-free/css/regular.css',
               'css/jquery.bootstrap.year.calendar-1.0.0.min.css',
               'css/zoigl.css'])
     .pipe(autoprefixer())

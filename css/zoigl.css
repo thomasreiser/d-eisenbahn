@@ -399,3 +399,7 @@ _:-ms-input-placeholder, :root #start-containers /*ie10-11*/ {
   border-bottom: none;
   text-decoration: underline;
 }
+
+body:not(.start) main {
+  padding: 3rem;
+}
